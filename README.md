@@ -1,3 +1,3 @@
 # COSC457FinalProject
-Bem O was here
-Bem S was here a little later
+Ben O was here
+Ben S was here a little later
