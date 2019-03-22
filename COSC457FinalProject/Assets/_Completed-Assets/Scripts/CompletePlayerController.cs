@@ -60,6 +60,14 @@ public class CompletePlayerController : MonoBehaviour {
 			//Update the currently displayed count by calling the SetCountText function.
 			SetCountText ();
 		}
+        //Check the provided Collider2D parameter other to see if it is tagged "Goal", if it is...
+        else if (other.gameObject.CompareTag("Goal"))
+        {
+            //... then check if we've collected all 12 pickups. If we have...
+            if (count >= 12)
+                //... then set the text property of our winText object to "You win!"
+                winText.text = "You win!";
+        }
 		
 
 	}
@@ -69,10 +77,5 @@ public class CompletePlayerController : MonoBehaviour {
 	{
 		//Set the text property of our our countText object to "Count: " followed by the number stored in our count variable.
 		countText.text = "Count: " + count.ToString ();
-
-		//Check if we've collected all 12 pickups. If we have...
-		if (count >= 12)
-			//... then set the text property of our winText object to "You win!"
-			winText.text = "You win!";
 	}
 }
