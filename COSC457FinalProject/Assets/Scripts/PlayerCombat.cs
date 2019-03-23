@@ -10,7 +10,7 @@ public class PlayerCombat : MonoBehaviour
     public Transform attackPos;
     public LayerMask whatIsEnemy;
     public float attackRange;
-    public int damage;
+    public float damage;
 
 
     // Start is called before the first frame update

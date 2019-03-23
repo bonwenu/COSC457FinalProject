@@ -9,7 +9,7 @@ public class GameHandler : MonoBehaviour {
 
 	private void Start () {
         float health = 1f;
-        FunctionPeriodic.Create(() => {
+        
             if (health > .01f) {
                 health -= .01f;
                 healthBar.SetSize(health);
@@ -26,6 +26,6 @@ public class GameHandler : MonoBehaviour {
                 health = 1f;
                 healthBar.SetColor(Color.red);
             }
-        }, .05f);
+        
 	}
 }
