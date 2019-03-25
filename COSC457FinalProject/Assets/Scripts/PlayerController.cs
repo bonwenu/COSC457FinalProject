@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 		float moveVertical = Input.GetAxis ("Vertical");
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
         rb2d.AddForce(movement * speed);
-	}
+    }
     
     void OnTriggerEnter2D(Collider2D other)
     {
