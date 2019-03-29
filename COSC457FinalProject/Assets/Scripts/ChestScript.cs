@@ -8,7 +8,8 @@ public class ChestScript : MonoBehaviour
     public Sprite openChest;
     public float interactRange;
 
-    private bool isOpen;
+    [Header("Set Dynamically")]
+    public bool isOpen;
 
     // Start is called before the first frame update
     void Start()
