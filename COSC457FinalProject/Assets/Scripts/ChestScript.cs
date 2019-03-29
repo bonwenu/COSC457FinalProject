@@ -19,17 +19,18 @@ public class ChestScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Only do if the chest is closed
-        if (!isOpen)
+
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
-            // Player presses "E" to open chests
-            if (Input.GetKey(KeyCode.E))
-            {
-                // Sprite is changed to an open chest when chest is opened
-                this.GetComponent<SpriteRenderer>().sprite = openChest;
-                // Chest is now open
-                isOpen = true;
-            }
+            // Sprite is changed to an open chest when chest is opened
+            this.GetComponent<SpriteRenderer>().sprite = openChest;
+            // Chest is now open
+            isOpen = true;
         }
+
     }
 }
