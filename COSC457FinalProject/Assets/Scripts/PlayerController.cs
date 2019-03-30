@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     private Rigidbody2D rb2d;
-    private int count;
+    public int count;
     public Text countText;
     public Text winText;
 
@@ -29,9 +29,8 @@ public class PlayerController : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("PickUp"))
+        if (other.gameObject.CompareTag("Chest"))
         {
-            other.gameObject.SetActive(false);
             count = count + 1;
             setCountText();
         }
@@ -41,7 +40,7 @@ public class PlayerController : MonoBehaviour
     void setCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if (count >= 8)
+        if (count >= 4)
         {
             winText.text = "You Win!";
         }
