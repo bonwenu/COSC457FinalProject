@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
+    private Vector2 moveVelocity;
     private Rigidbody2D rb2d;
     public int count;
     public Text countText;
@@ -19,12 +20,15 @@ public class PlayerController : MonoBehaviour
         winText.text = "";
     }
 
-	void FixedUpdate()
+    void Update()
+    {
+        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        moveVelocity = moveInput.normalized * speed;
+    }
+
+    void FixedUpdate()
 	{
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-        rb2d.AddForce(movement * speed);
+        rb2d.MovePosition(rb2d.position + moveVelocity * Time.fixedDeltaTime);
 	}
     
     void OnTriggerEnter2D(Collider2D other)
