@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEffect: {fileID: 0}
-  health: 0.4
+  health: 0.1
   tempHealth: 0
   healthBar: {fileID: 1830723019}
 --- !u!58 &50338128
@@ -1416,7 +1416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d0d1f43d4417f045aab31aec84bdb4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 10
   player: {fileID: 819837336}
 --- !u!4 &824582748
 Transform:
@@ -1668,7 +1668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEffect: {fileID: 0}
-  health: 0.5
+  health: 20
   tempHealth: 0
   healthBar: {fileID: 1641127281}
 --- !u!58 &1417809286
@@ -2799,7 +2799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d0d1f43d4417f045aab31aec84bdb4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
   player: {fileID: 819837336}
 --- !u!4 &2064447342
 Transform:
