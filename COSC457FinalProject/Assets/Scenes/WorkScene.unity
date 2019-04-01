@@ -66037,7 +66037,6 @@ GameObject:
   - component: {fileID: 819837338}
   - component: {fileID: 819837343}
   - component: {fileID: 819837337}
-  - component: {fileID: 819837344}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -66095,7 +66094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f547571c22246449a9e544f42b9bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
+  speed: 40
   count: 0
   countText: {fileID: 284555842}
   winText: {fileID: 1708289167}
@@ -66200,18 +66199,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3.5
---- !u!114 &819837344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 819837336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67dd461abf07154880e2868a6261fa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &824582746
 GameObject:
   m_ObjectHideFlags: 0
@@ -66241,7 +66228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d0d1f43d4417f045aab31aec84bdb4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   player: {fileID: 819837336}
 --- !u!4 &824582748
 Transform:
@@ -67982,7 +67969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d0d1f43d4417f045aab31aec84bdb4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 10
   player: {fileID: 819837336}
 --- !u!4 &2064447342
 Transform:
