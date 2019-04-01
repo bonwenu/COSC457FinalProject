@@ -66034,6 +66034,7 @@ GameObject:
   - component: {fileID: 819837341}
   - component: {fileID: 819837340}
   - component: {fileID: 819837339}
+  - component: {fileID: 819837344}
   - component: {fileID: 819837338}
   - component: {fileID: 819837343}
   - component: {fileID: 819837337}
@@ -66199,6 +66200,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3.5
+--- !u!114 &819837344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819837336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3f8f5165350e8447a1f516a925f553d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: []
+  possibleItems: []
 --- !u!1 &824582746
 GameObject:
   m_ObjectHideFlags: 0
@@ -67263,7 +67278,7 @@ GameObject:
   - component: {fileID: 1681325544}
   m_Layer: 0
   m_Name: landmark_truck
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

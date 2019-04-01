@@ -33,20 +33,37 @@ public class PlayerController : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other)
     {
+        // If the player runs into a chest...
         if (other.gameObject.CompareTag("Chest"))
         {
-            count = count + 1;
-            setCountText();
+            // ...And the chest isn't open already...
+            if (!other.gameObject.GetComponent<ChestScript>().isOpen)
+            {
+                // ...Then set the chest as open,
+                other.gameObject.GetComponent<ChestScript>().isOpen = true;
+                // Add one to the inventory count,
+                count = count + 1;
+                // Give the player a random item,
+                this.GetComponent<PlayerInventory>().GivePlayerRandomItem();
+                // And set the UI text telling the player how many items they have.
+                setCountText();
+            }
         }
-        
+        // If the player runs into the car...
+        else if (other.gameObject.CompareTag("Car"))
+        {
+            // ...And the player has all items...
+            if (count >= 4 && this.GetComponent<PlayerInventory>().HasAllItems())
+            {
+                // ...Then they win!
+                winText.text = "You Win!";
+            }
+        }
+
     }
 
     void setCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if (count >= 4)
-        {
-            winText.text = "You Win!";
-        }
     }
 }

@@ -29,8 +29,6 @@ public class ChestScript : MonoBehaviour
         {
             // Sprite is changed to an open chest when chest is opened
             this.GetComponent<SpriteRenderer>().sprite = openChest;
-            // Chest is now open
-            isOpen = true;
         }
 
     }
