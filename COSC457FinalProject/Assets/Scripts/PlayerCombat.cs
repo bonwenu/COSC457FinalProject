@@ -47,7 +47,7 @@ public class PlayerCombat : MonoBehaviour
         }
         if (health <= 0.0f)
         {
-            Destroy(gameObject);
+           // Destroy(gameObject);
         }
         //transform.Translate(Vector2.left * speed * Time.deltaTime);
 
@@ -81,8 +81,9 @@ public class PlayerCombat : MonoBehaviour
             health = 0f; // Just too make sure its 0
         }
         healthBar.SetSize(health / tempHealth);
-        Debug.Log("damage Taken !");
+        Debug.Log("You took " + damage*100 +" damage!");
 
     }
-
 }
+
+
