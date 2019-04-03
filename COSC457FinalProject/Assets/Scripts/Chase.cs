@@ -10,6 +10,8 @@ public class Chase : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
+        
+        DontDestroyOnLoad(transform.gameObject); //keeps player when switching scene
     }
 
     void Update()
