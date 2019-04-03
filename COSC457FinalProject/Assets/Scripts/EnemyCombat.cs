@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class EnemyCombat : MonoBehaviour
 {
-    
-    public GameObject damageEffect;
+    private float timeBtwAttack;
+    public float startTimeBtwAttack;
+    public Transform attackPos;
+    public LayerMask whatIsEnemy;
+    public float attackRange;
+    public float damage;
     public float health;            // Set health to (Desired health/100)-0.1
     public float tempHealth ;
 
@@ -24,7 +28,26 @@ public class EnemyCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (timeBtwAttack <= 0)
+        {
+            // time you can attack
+            if (Input.GetKey(KeyCode.Space))
+            {
+                timeBtwAttack = startTimeBtwAttack;
+                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
+                for (int i = 0; i < enemiesToDamage.Length; i++)
+                {
+                    enemiesToDamage[i].GetComponent<PlayerCombat>().TakeDamage(damage);
+                    
+                }
+            }
+
+        }
+        else
+        {
+            timeBtwAttack -= Time.deltaTime;
+        }
         if (health <= 0.0f)
         {
             Destroy(gameObject);
@@ -33,7 +56,7 @@ public class EnemyCombat : MonoBehaviour
 
         if (health > .01f)
         {
-            
+
 
             if (health < .3f)
             {
@@ -41,11 +64,16 @@ public class EnemyCombat : MonoBehaviour
 
 
                 healthBar.SetColor(Color.red);
-                
+
             }
         }
-       
-        
+
+
+    }
+    void OnDrawGizmosSelected() // Methods to sow attack range
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
     public void TakeDamage(float damage)
     {
@@ -57,7 +85,7 @@ public class EnemyCombat : MonoBehaviour
             health = 0f; // Just too make sure its 0
         }
         healthBar.SetSize(health/tempHealth);
-        Debug.Log("damage Taken !");
+        Debug.Log("Enemy took "+ damage*100 + " damage!");
         
     }
 }

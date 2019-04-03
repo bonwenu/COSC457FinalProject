@@ -12,25 +12,57 @@ public class PlayerController : MonoBehaviour
     public Text countText;
     public Text winText;
 
+    private Animator anim; 
+
+    //all objects with player controller script will now check this static variable
+    private static bool playerExists; //for switching between scenes
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         count = 0;
         setCountText();
         winText.text = "";
+
+        anim = GetComponent<Animator>(); //makes a connection with the animator 
+        
+        if(!playerExists)
+        {
+            playerExists = true;
+            DontDestroyOnLoad(transform.gameObject); //keeps player when switching scenes
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Update()
     {
+
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput.normalized * speed;
+
+        /**
+        if(Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
+        {
+            transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime, 0f, 0f));
+        }
+        if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
+        {
+            transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * speed * Time.deltaTime, 0f));
+        }
+        */
+
+        anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
+        anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
     }
 
     void FixedUpdate()
-	{
+    {
         rb2d.MovePosition(rb2d.position + moveVelocity * Time.fixedDeltaTime);
-	}
-    
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         // If the player runs into a chest...
