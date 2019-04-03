@@ -12,12 +12,25 @@ public class PlayerController : MonoBehaviour
     public Text countText;
     public Text winText;
 
+    //all objects with player controller script will now check this static variable
+    private static bool playerExists; //for switching between scenes
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         count = 0;
         setCountText();
         winText.text = "";
+        
+        if(!playerExists)
+        {
+            playerExists = true;
+            DontDestroyOnLoad(transform.gameObject); //keeps player when switching scenes
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Update()

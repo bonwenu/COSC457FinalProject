@@ -4,6 +4,7 @@ using System.Collections;
 public class CompleteCameraController : MonoBehaviour {
 
 	public GameObject player;		//Public variable to store a reference to the player game object
+    private bool playerExists;
 
 
 	private Vector3 offset;			//Private variable to store the offset distance between the player and camera
@@ -13,7 +14,17 @@ public class CompleteCameraController : MonoBehaviour {
 	{
 		//Calculate and store the offset value by getting the distance between the player's position and camera's position.
 		offset = transform.position - player.transform.position;
-	}
+
+        if (!playerExists)
+        {
+            playerExists = true;
+            DontDestroyOnLoad(transform.gameObject); //keeps player when switching scenes
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 	
 	// LateUpdate is called after Update each frame
 	void LateUpdate () 

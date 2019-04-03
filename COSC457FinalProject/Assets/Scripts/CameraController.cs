@@ -7,11 +7,24 @@ public class CameraController : MonoBehaviour
 
     public GameObject player;
     private Vector3 offset;
+    private bool cameraExists;
+    public float moveSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
         offset = transform.position - player.transform.position;
+
+        if (!cameraExists)
+        {
+            cameraExists = true;
+            DontDestroyOnLoad(transform.gameObject); //keeps player when switching scenes
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     // Update is called once per frame
