@@ -12,7 +12,7 @@ public class EnemyCombat : MonoBehaviour
     public float damage;
     public float health;            // Set health to (Desired health/100)-0.1
     public float tempHealth ;
-
+    
     private Animator anime;
     [SerializeField] public HealthBar healthBar;
 
@@ -32,7 +32,7 @@ public class EnemyCombat : MonoBehaviour
         if (timeBtwAttack <= 0)
         {
             // time you can attack
-            if (Input.GetKey(KeyCode.Space))
+            if ( Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
             {
                 timeBtwAttack = startTimeBtwAttack;
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);

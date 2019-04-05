@@ -66836,10 +66836,20 @@ PrefabInstance:
       propertyPath: attackRange
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4166583928501172983, guid: 65516d760e821e24195d4e58d3a83f40,
+        type: 3}
+      propertyPath: startTimeBtwAttack
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 4166583928501172980, guid: 65516d760e821e24195d4e58d3a83f40,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166583926979392237, guid: 65516d760e821e24195d4e58d3a83f40,
+        type: 3}
+      propertyPath: startTimeBtwAttack
+      value: 1.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65516d760e821e24195d4e58d3a83f40, type: 3}
