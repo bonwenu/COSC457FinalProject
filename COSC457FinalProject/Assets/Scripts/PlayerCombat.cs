@@ -47,7 +47,7 @@ public class PlayerCombat : MonoBehaviour
         }
         if (health <= 0.0f)
         {
-           // Destroy(gameObject);
+            Destroy(gameObject);
         }
         //transform.Translate(Vector2.left * speed * Time.deltaTime);
 

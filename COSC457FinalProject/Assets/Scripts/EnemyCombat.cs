@@ -5,14 +5,14 @@ using UnityEngine;
 public class EnemyCombat : MonoBehaviour
 {
     private float timeBtwAttack;
-    public float startTimeBtwAttack;
+    public float startTimeBtwAttack = 1.7f;
     public Transform attackPos;
     public LayerMask whatIsEnemy;
     public float attackRange;
     public float damage;
     public float health;            // Set health to (Desired health/100)-0.1
     public float tempHealth ;
-    
+
     private Animator anime;
     [SerializeField] public HealthBar healthBar;
 
@@ -32,8 +32,8 @@ public class EnemyCombat : MonoBehaviour
         if (timeBtwAttack <= 0)
         {
             // time you can attack
-            if ( Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
-            {
+            
+            
                 timeBtwAttack = startTimeBtwAttack;
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
@@ -41,7 +41,7 @@ public class EnemyCombat : MonoBehaviour
                     enemiesToDamage[i].GetComponent<PlayerCombat>().TakeDamage(damage);
                     
                 }
-            }
+            
 
         }
         else
