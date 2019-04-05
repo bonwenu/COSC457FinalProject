@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyCombat : MonoBehaviour
 {
-    private float timeBtwAttack;
-    public float startTimeBtwAttack = 1.7f;
+    private float timeBtwAttack =0;
+    public float startTimeBtwAttack;
     public Transform attackPos;
     public LayerMask whatIsEnemy;
     public float attackRange;

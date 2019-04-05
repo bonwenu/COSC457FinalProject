@@ -6,7 +6,7 @@ public class PlayerCombat : MonoBehaviour
 {
     private float timeBtwAttack;
     public float startTimeBtwAttack;
-
+    public GameObject blood;
     public Transform attackPos;
     public LayerMask whatIsEnemy;
     public float attackRange;
@@ -73,6 +73,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        Instantiate(blood, transform.position, Quaternion.identity);
         healthBar.SetSize(health);
         health -= damage;
 
