@@ -7,6 +7,7 @@ public class EnemyCombat : MonoBehaviour
     private float timeBtwAttack =0;
     public float startTimeBtwAttack;
     public Transform attackPos;
+    public GameObject blood;
     public LayerMask whatIsEnemy;
     public float attackRange;
     public float damage;
@@ -48,7 +49,7 @@ public class EnemyCombat : MonoBehaviour
         {
             timeBtwAttack -= Time.deltaTime;
         }
-        if (health <= 0.0f)
+        if (health == 0.0f)
         {
             Destroy(gameObject);
         }
@@ -77,6 +78,7 @@ public class EnemyCombat : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
+        Instantiate(blood, transform.position, Quaternion.identity);
         healthBar.SetSize(health);
         health -= damage;
         

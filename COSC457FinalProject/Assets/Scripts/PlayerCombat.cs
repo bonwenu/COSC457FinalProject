@@ -45,7 +45,7 @@ public class PlayerCombat : MonoBehaviour
         {
             timeBtwAttack -= Time.deltaTime;
         }
-        if (health <= 0.0f)
+        if (health == 0.0f)
         {
             Destroy(gameObject);
         }
