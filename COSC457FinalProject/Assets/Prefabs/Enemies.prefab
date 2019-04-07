@@ -300,12 +300,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38146627f6d6ab4cbd986d9ddf62bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwAttack: 0.3
+  startTimeBtwAttack: 1.7
   attackPos: {fileID: 4166583928694626571}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 512
-  attackRange: 3
+  attackRange: 9
   damage: 0.05
   health: 0.5
   tempHealth: 0
@@ -919,14 +919,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38146627f6d6ab4cbd986d9ddf62bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwAttack: 0.3
+  startTimeBtwAttack: 1.7
   attackPos: {fileID: 4166583926943664936}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 512
-  attackRange: 3
+  attackRange: 18
   damage: 0.05
-  health: 0.5
+  health: 0.8
   tempHealth: 0
   healthBar: {fileID: 4166583927722846355}
 --- !u!114 &4166583928501172980
