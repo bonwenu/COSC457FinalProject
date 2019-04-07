@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class InstructionsButtons : MonoBehaviour
+public class GameOverButton : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(0);
     }
 }
