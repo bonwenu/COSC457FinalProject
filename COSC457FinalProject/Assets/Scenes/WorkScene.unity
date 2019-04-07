@@ -74669,7 +74669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 75006506113401768, guid: 6fcf08c809f0bbc4eb35a28321461bde, type: 3}
-  spawnRate: 2
+  spawnRate: 10
 --- !u!4 &398329810
 Transform:
   m_ObjectHideFlags: 0
