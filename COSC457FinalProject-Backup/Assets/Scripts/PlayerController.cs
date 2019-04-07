@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -78,6 +79,7 @@ public class PlayerController : MonoBehaviour
             {
                 // ...Then they win!
                 winText.text = "You Win!";
+                SceneManager.LoadScene(3);
             }
         }
 

@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
 {
     private float timeBtwAttack;
     public float startTimeBtwAttack;
-
+    public GameObject blood;
     public Transform attackPos;
     public LayerMask whatIsEnemy;
     public float attackRange;
@@ -45,9 +46,9 @@ public class PlayerCombat : MonoBehaviour
         {
             timeBtwAttack -= Time.deltaTime;
         }
-        if (health <= 0.0f)
+        if (health == 0.0f)
         {
-           // Destroy(gameObject);
+            Destroy(gameObject);
         }
         //transform.Translate(Vector2.left * speed * Time.deltaTime);
 
@@ -73,12 +74,14 @@ public class PlayerCombat : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        Instantiate(blood, transform.position, Quaternion.identity);
         healthBar.SetSize(health);
         health -= damage;
 
         if (health <= 0f)
         {
             health = 0f; // Just too make sure its 0
+            SceneManager.LoadScene(2);
         }
         healthBar.SetSize(health / tempHealth);
         Debug.Log("You took " + damage*100 +" damage!");
