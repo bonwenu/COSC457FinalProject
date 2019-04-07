@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 75006506113401769}
   - component: {fileID: 75006506113401770}
   m_Layer: 0
-  m_Name: 'Enemy3Holder '
+  m_Name: Single Small zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 16
-  target: {fileID: 0}
+  target: {fileID: 4142723973097271418, guid: 7eed2fc5ac77e704aabde252875e1a6b, type: 3}
 --- !u!1 &75006506408272176
 GameObject:
   m_ObjectHideFlags: 0
