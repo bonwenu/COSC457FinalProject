@@ -10,6 +10,7 @@ public class PlayerInventory : MonoBehaviour
     public string[] essentialItems; // THIS IS ALL THE CAR ITEMS IN THE GAME
     public string[] weaponItems; // THIS IS ALL WEAPONS IN THE GAME
     public string[] healthItems; // THIS IS ALL HEALTH ITEMS IN THE GAME
+    public int selectedItem; // this is to indicate which item the player currently has equipped
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +22,103 @@ public class PlayerInventory : MonoBehaviour
 
         // Player inventory initialized to empty strings
         int maxHealthItems = 5;
-        inventory = new string[essentialItems.Length+weaponItems.Length+maxHealthItems];
-        for (int i = 0; i < inventory.Length; i++)
+        inventory = new string[essentialItems.Length + weaponItems.Length + maxHealthItems + 1];
+        inventory[0] = "None"; // this is purely so the player can have nothing equipped if they so wish
+        for (int i = 1; i < inventory.Length; i++)
         {
             inventory[i] = "";
         }
+        selectedItem = 0;
+    }
+
+    // The player can use the mouse wheel to select an item;
+    void Update()
+    {
+        float msd = Input.mouseScrollDelta.y;
+        if (msd != 0)
+        {
+            if(msd > 0)
+            {
+                // if the wheel scrolled up, select the next item
+                SelectNextItem();
+            }
+            else
+            {
+                // if the wheel scrolled down, select the previous item
+                SelectPreviousItem();
+            }
+        }
+    }
+
+    // SelectNextItem selects the next item
+    public void SelectNextItem()
+    {
+        if(selectedItem + 1 == inventory.Length)
+        {
+            selectedItem = 0;
+        }
+        else
+        {
+            selectedItem++;
+        }
+
+        for(int i = 0; i < inventory.Length; i++)
+        {
+            if (IsEssentialItem(inventory[selectedItem]))
+            {
+                if (selectedItem + 1 == inventory.Length)
+                {
+                    selectedItem = 0;
+                }
+                else
+                {
+                    selectedItem++;
+                }
+            }
+            else
+                return;
+        }
+    }
+
+    // SelectPreviousItem selects the previous item I'm not good at descriptive documentation
+    public void SelectPreviousItem()
+    {
+        if(selectedItem == 0)
+        {
+            selectedItem = inventory.Length - 1;
+        }
+        else
+        {
+            selectedItem--;
+        }
+
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (IsEssentialItem(inventory[selectedItem]))
+            {
+                if (selectedItem == 0)
+                {
+                    selectedItem = inventory.Length - 1;
+                }
+                else
+                {
+                    selectedItem--;
+                }
+            }
+            else
+                return;
+        }
+    }
+
+    // isEssentialItem detects if an item is an essential item (car part), currently only used in item selection methods
+    public bool IsEssentialItem(string item)
+    {
+        for(int i = 0; i < essentialItems.Length; i++)
+        {
+            if (essentialItems[i].CompareTo(item) == 0)
+                return true;
+        }
+        return false;
     }
 
     // IsInInventory checks to see if the item is in the players inventory already
@@ -55,6 +148,8 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    // GivePlayerRandomItem gives the player a bomb that explodes when in the inventory, killing the player instantly
+    // just kidding, it gives them a random item they don't already have (except bandages, player can have multiple)
     public void GivePlayerRandomItem()
     {
         System.Random r = new System.Random();
@@ -77,7 +172,7 @@ public class PlayerInventory : MonoBehaviour
                         if (possibleItems[j][i].CompareTo(inventory[k]) == 0)
                             m++;
                         if (m >= 5)
-                            GivePlayerRandomItem(); // This is bad programming don't do this
+                            GivePlayerRandomItem(); // There is probably a smarter way to do this
                     }
                 }
 
@@ -88,6 +183,7 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    // HasAllItems checks to see if the player has all essential items (car parts)
     public bool HasAllItems()
     {
         for (int i = 0; i < essentialItems.Length; i++)
