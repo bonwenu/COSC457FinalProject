@@ -74851,6 +74851,7 @@ RectTransform:
   m_Children:
   - {fileID: 284555841}
   - {fileID: 1708289166}
+  - {fileID: 1931132522}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -80681,6 +80682,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1490039738}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1931132519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1931132522}
+  - component: {fileID: 1931132521}
+  - component: {fileID: 1931132520}
+  m_Layer: 5
+  m_Name: PickupText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1931132520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931132519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Inventory:'
+--- !u!222 &1931132521
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931132519}
+  m_CullTransparentMesh: 0
+--- !u!224 &1931132522
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931132519}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 691921950}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 238.3, y: -1.475}
+  m_SizeDelta: {x: 75.4, y: 299.95}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2051968536
 GameObject:
   m_ObjectHideFlags: 0
@@ -81137,6 +81217,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4142723973097271423, guid: 7eed2fc5ac77e704aabde252875e1a6b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 19e51b4c651c4df44ac1ba69d889aa1d,
+        type: 3}
     - target: {fileID: 4142723973097271417, guid: 7eed2fc5ac77e704aabde252875e1a6b,
         type: 3}
       propertyPath: countText
@@ -81147,6 +81233,11 @@ PrefabInstance:
       propertyPath: winText
       value: 
       objectReference: {fileID: 1708289167}
+    - target: {fileID: 4142723973097271362, guid: 7eed2fc5ac77e704aabde252875e1a6b,
+        type: 3}
+      propertyPath: pickupText
+      value: 
+      objectReference: {fileID: 1931132520}
     - target: {fileID: 4142723973097271419, guid: 7eed2fc5ac77e704aabde252875e1a6b,
         type: 3}
       propertyPath: blood
@@ -81167,12 +81258,6 @@ PrefabInstance:
       propertyPath: startTimeBtwAttack
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4142723973097271423, guid: 7eed2fc5ac77e704aabde252875e1a6b,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 19e51b4c651c4df44ac1ba69d889aa1d,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eed2fc5ac77e704aabde252875e1a6b, type: 3}
 --- !u!1001 &4166583926754174841
