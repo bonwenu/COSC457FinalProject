@@ -9,6 +9,7 @@ TagManager:
   - Chest
   - Car
   - player
+  - Enviroment
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - Zombie
   - Player
-  - 
+  - Enviroment
   - 
   - 
   - 

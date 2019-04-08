@@ -137,7 +137,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
-  possibleItems: []
+  essentialItems: []
+  weaponItems: []
+  healthItems: []
+  selectedItem: 0
 --- !u!58 &4142723973097271416
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -182,7 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2784b5ea9fcf2c848a948f54ed3e8534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwAttack: 0.3
+  startTimeBtwAttack: 1
+  blood: {fileID: 0}
   attackPos: {fileID: 4142723973633419962}
   whatIsEnemy:
     serializedVersion: 2
@@ -191,6 +195,8 @@ MonoBehaviour:
   damage: 0.1
   health: 1
   tempHealth: 0
+  hitSound: {fileID: 0}
+  hitSource: {fileID: 0}
   healthBar: {fileID: 4142723974350413873}
 --- !u!1 &4142723973340048375
 GameObject:

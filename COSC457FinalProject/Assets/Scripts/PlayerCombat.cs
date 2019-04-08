@@ -14,6 +14,8 @@ public class PlayerCombat : MonoBehaviour
     public float damage;
     public float health;            // Set health to (Desired health/100)-0.1
     public float tempHealth;
+    public AudioClip hitSound;
+    public AudioSource hitSource;
 
     private Animator anime;
     [SerializeField] public HealthBar healthBar;
@@ -23,6 +25,7 @@ public class PlayerCombat : MonoBehaviour
     void Start()
     {
         tempHealth = health;
+        hitSource.clip = hitSound;
     }
 
     // Update is called once per frame
@@ -74,6 +77,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+       hitSource.Play();
         Instantiate(blood, transform.position, Quaternion.identity);
         healthBar.SetSize(health);
         health -= damage;
@@ -87,6 +91,8 @@ public class PlayerCombat : MonoBehaviour
         Debug.Log("You took " + damage*100 +" damage!");
 
     }
+
+   
 }
 
 
