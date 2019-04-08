@@ -33,11 +33,16 @@ public class Gun : MonoBehaviour
             {
                 Instantiate(gunFire, transform.position, Quaternion.identity);
                 Instantiate(projectile, shotPoint.position, transform.rotation);
-
+                timeBtwnShots = startTimeBtwnShots;
             }
         }
         else {
             timeBtwnShots -= Time.deltaTime;
         }
+    }
+
+    void checkForGun()
+    {
+        // Check if gun is equipped.
     }
 }

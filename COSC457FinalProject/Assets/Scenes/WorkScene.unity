@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 139162097}
   - component: {fileID: 139162099}
   - component: {fileID: 139162098}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tilemap_Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15963,7 +15963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 343906983}
   - component: {fileID: 343906982}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16010,7 +16010,7 @@ GameObject:
   - component: {fileID: 386664051}
   - component: {fileID: 386664053}
   - component: {fileID: 386664052}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tilemap_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74669,7 +74669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 75006506113401768, guid: 6fcf08c809f0bbc4eb35a28321461bde, type: 3}
-  spawnRate: 10
+  spawnRate: 8
 --- !u!4 &398329810
 Transform:
   m_ObjectHideFlags: 0
@@ -74884,6 +74884,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &819837345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4142723973097271420, guid: 7eed2fc5ac77e704aabde252875e1a6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4142723972815423970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &819837346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74907,7 +74913,7 @@ GameObject:
   - component: {fileID: 939285879}
   - component: {fileID: 939285881}
   - component: {fileID: 939285880}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tilemap_Grasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75025,7 +75031,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1017715828}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Buildings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75047,6 +75053,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1036836213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1036836214}
+  - component: {fileID: 1036836215}
+  m_Layer: 9
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1036836214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036836213}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1771783150}
+  m_Father: {fileID: 819837345}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1036836215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036836213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28315542d107e9a42a13577618f0c66b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: -90
+  projectile: {fileID: 5042994079260301834, guid: 78d75b93b1fd22b4c9da0535ec5c23b2,
+    type: 3}
+  gunFire: {fileID: 1280544489}
+  shotPoint: {fileID: 1771783150}
+  startTimeBtwnShots: 0.8
 --- !u!1001 &1067058679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80340,7 +80396,7 @@ GameObject:
   - component: {fileID: 1681325546}
   - component: {fileID: 1681325545}
   - component: {fileID: 1681325544}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: landmark_truck
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -80514,6 +80570,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708289165}
   m_CullTransparentMesh: 0
+--- !u!1 &1771783149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1771783150}
+  m_Layer: 9
+  m_Name: ShotPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1771783150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771783149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1036836214}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1855148550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80608,9 +80694,9 @@ GameObject:
   - component: {fileID: 2051968541}
   - component: {fileID: 2051968540}
   - component: {fileID: 2051968539}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: landmark_cabin
-  m_TagString: Untagged
+  m_TagString: Enviroment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80967,6 +81053,11 @@ PrefabInstance:
       propertyPath: blood
       value: 
       objectReference: {fileID: 163229321}
+    - target: {fileID: 75006506408272176, guid: 6fcf08c809f0bbc4eb35a28321461bde,
+        type: 3}
+      propertyPath: m_TagString
+      value: zombie
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fcf08c809f0bbc4eb35a28321461bde, type: 3}
 --- !u!1001 &4142723972815423970
