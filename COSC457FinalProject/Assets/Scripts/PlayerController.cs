@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     public float speed;
     private Vector2 moveVelocity;
     private Rigidbody2D rb2d;
-    public int count;
-    public Text countText;
+    public int score;
+    public Text scoreText;
     public Text winText;
 
     private Animator anim; 
@@ -20,8 +20,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        count = 0;
-        setCountText();
+        score = 0;
+        setScoreText();
         winText.text = "";
 
         anim = GetComponent<Animator>(); //makes a connection with the animator 
@@ -52,6 +52,11 @@ public class PlayerController : MonoBehaviour
         rb2d.MovePosition(rb2d.position + moveVelocity * Time.fixedDeltaTime);
     }
 
+    void OnDestroy()
+    {
+        Debug.Log("GameStatus was destroyed.");
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         // If the player runs into a chest...
@@ -62,19 +67,19 @@ public class PlayerController : MonoBehaviour
             {
                 // ...Then set the chest as open,
                 other.gameObject.GetComponent<ChestScript>().isOpen = true;
-                // Add one to the inventory count,
-                count = count + 1;
+                // Add one to the inventory score,
+                score = score + 1;
                 // Give the player a random item,
                 this.GetComponent<PlayerInventory>().GivePlayerRandomItem();
                 // And set the UI text telling the player how many items they have.
-                setCountText();
+                setScoreText();
             }
         }
         // If the player runs into the car...
         else if (other.gameObject.CompareTag("Car"))
         {
             // ...And the player has all items...
-            if (count >= 4 && this.GetComponent<PlayerInventory>().HasAllItems())
+            if (score >= 4 && this.GetComponent<PlayerInventory>().HasAllItems())
             {
                 // ...Then they win!
                 winText.text = "You Win!";
@@ -83,8 +88,8 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void setCountText()
+    void setScoreText()
     {
-        countText.text = "Count: " + count.ToString();
+        scoreText.text = "Score: " + score.ToString();
     }
 }
