@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerInventory : MonoBehaviour
     public string[] weaponItems; // THIS IS ALL WEAPONS IN THE GAME
     public string[] healthItems; // THIS IS ALL HEALTH ITEMS IN THE GAME
     public int selectedItem; // this is to indicate which item the player currently has equipped
+    public Text pickupText;
 
     // Start is called before the first frame update
     void Start()
@@ -178,6 +180,7 @@ public class PlayerInventory : MonoBehaviour
 
                 AddToInventory(possibleItems[j][i]);
                 Debug.Log("Added " + possibleItems[j][i] + " to inventory");
+                pickupText.text = pickupText.text + "\n" + possibleItems[j][i];
                 return;
             }
         }
