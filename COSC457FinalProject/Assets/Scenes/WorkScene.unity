@@ -81065,12 +81065,17 @@ PrefabInstance:
         type: 3}
       propertyPath: hitSound
       value: 
-      objectReference: {fileID: 8300000, guid: e7014b1b56200bb40b65e8d30d15368a, type: 3}
+      objectReference: {fileID: 8300000, guid: 04f8ad8a63fe71349bdb529c76f10115, type: 3}
     - target: {fileID: 4142723973097271419, guid: 7eed2fc5ac77e704aabde252875e1a6b,
         type: 3}
       propertyPath: hitSource
       value: 
       objectReference: {fileID: 1449958816}
+    - target: {fileID: 4142723973097271419, guid: 7eed2fc5ac77e704aabde252875e1a6b,
+        type: 3}
+      propertyPath: startTimeBtwAttack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4142723973097271423, guid: 7eed2fc5ac77e704aabde252875e1a6b,
         type: 3}
       propertyPath: m_Sprite
