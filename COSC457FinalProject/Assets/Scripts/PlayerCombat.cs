@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -80,6 +81,7 @@ public class PlayerCombat : MonoBehaviour
         if (health <= 0f)
         {
             health = 0f; // Just too make sure its 0
+            SceneManager.LoadScene(2);
         }
         healthBar.SetSize(health / tempHealth);
         Debug.Log("You took " + damage*100 +" damage!");
