@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 75006506408272178}
   m_Layer: 8
   m_Name: Enemy3
-  m_TagString: Untagged
+  m_TagString: zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTimeBtwAttack: 1.7
   attackPos: {fileID: 75006507297643191}
-  blood: {fileID: 0}
+  blood: {fileID: 5231521832160612022, guid: 92edf3e73569d1448829c64eb8715a1c, type: 3}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 512

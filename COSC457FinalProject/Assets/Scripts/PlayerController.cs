@@ -83,7 +83,6 @@ public class PlayerController : MonoBehaviour
             if (score >= 4 && this.GetComponent<PlayerInventory>().HasAllItems())
             {
                 // ...Then they win!
-                winText.text = "You Win!";
                 SceneManager.LoadScene(3);
             }
         }

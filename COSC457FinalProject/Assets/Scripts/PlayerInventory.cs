@@ -23,7 +23,7 @@ public class PlayerInventory : MonoBehaviour
         healthItems = new string[] {"Bandage"};
 
         // Player inventory initialized to empty strings
-        int maxHealthItems = 5;
+        int maxHealthItems = 2;
         inventory = new string[essentialItems.Length + weaponItems.Length + maxHealthItems + 1];
         inventory[0] = "None"; // this is purely so the player can have nothing equipped if they so wish
         for (int i = 1; i < inventory.Length; i++)
@@ -173,7 +173,7 @@ public class PlayerInventory : MonoBehaviour
                     {
                         if (possibleItems[j][i].CompareTo(inventory[k]) == 0)
                             m++;
-                        if (m >= 5)
+                        if (m >= 2)
                             GivePlayerRandomItem(); // There is probably a smarter way to do this
                     }
                 }
