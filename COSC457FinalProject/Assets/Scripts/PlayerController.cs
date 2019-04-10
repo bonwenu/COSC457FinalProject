@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
     public int score;
     public Text scoreText;
-    public Text winText;
 
     private Animator anim; 
 
@@ -23,7 +22,6 @@ public class PlayerController : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         score = 0;
         setScoreText();
-        winText.text = "";
 
         anim = GetComponent<Animator>(); //makes a connection with the animator 
         

@@ -18,7 +18,7 @@ public class PlayerInventory : MonoBehaviour
     void Start()
     {
         // Can add items here
-        essentialItems = new string[] { "Gas", "Tire", "Keys", "Battery" };
+        essentialItems = new string[] { "Gas", "Tire", "Starter", "Battery" };
         weaponItems = new string[] {"Knife", "Gun"};
         healthItems = new string[] {"Bandage"};
 
