@@ -13,6 +13,7 @@ public class PlayerInventory : MonoBehaviour
     public string[] healthItems; // THIS IS ALL HEALTH ITEMS IN THE GAME
     public int selectedItem; // this is to indicate which item the player currently has equipped
     public Text pickupText;
+    public int maxHealthItems;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,6 @@ public class PlayerInventory : MonoBehaviour
         healthItems = new string[] {"Bandage"};
 
         // Player inventory initialized to empty strings
-        int maxHealthItems = 2;
         inventory = new string[essentialItems.Length + weaponItems.Length + maxHealthItems + 1];
         inventory[0] = "None"; // this is purely so the player can have nothing equipped if they so wish
         for (int i = 1; i < inventory.Length; i++)
@@ -173,7 +173,7 @@ public class PlayerInventory : MonoBehaviour
                     {
                         if (possibleItems[j][i].CompareTo(inventory[k]) == 0)
                             m++;
-                        if (m >= 2)
+                        if (m >= maxHealthItems)
                             GivePlayerRandomItem(); // There is probably a smarter way to do this
                     }
                 }
