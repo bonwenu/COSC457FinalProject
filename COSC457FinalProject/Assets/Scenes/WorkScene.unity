@@ -70852,6 +70852,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 819837336}
+  minX: -730
+  maxX: 730
+  minY: -485
+  maxY: 485
 --- !u!4 &1200044013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2784486952247093736, guid: 6111ea5b3c625bc4f94f97bfd51e27cd,
