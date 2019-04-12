@@ -1,0 +1,82 @@
+21:20:01:931 (25956) > --- NIXXES log start ---
+21:20:01:933 (25956) > 
+21:20:01:934 (25956) > Memory statistics:
+21:20:01:936 (25956) >   Total RAM = 7.9 GB (8121 MB)
+21:20:01:937 (25956) >   Avail RAM = 3.9 GB (4015 MB)
+21:20:01:937 (25956) >   Total virtual memory = 4.0 GB (4095 MB)
+21:20:01:939 (25956) >   Avail virtual memory = 3.3 GB (3427 MB)
+21:20:01:940 (25956) > OS = Windows 8 (build 9200)
+21:20:01:941 (25956) > Starting Tomb Raider v1.01.748.0
+21:20:02:542 (25956) > [Main] Current directory: F:\Program Files (x86)\Steam\steamapps\common\Tomb Raider
+21:20:02:586 (25956) > Mounted TITLE.000
+21:20:02:605 (25956) > Mounted PATCH.000
+21:20:02:638 (25956) > Mounted PATCH2.000
+21:20:02:759 (25956) > [Render] PCDeviceManager constructor start
+21:20:04:027 (25956) > [Render] PCDeviceManager constructor end
+21:20:04:197 (25956) > [Render] PCDX11DeviceManager constructor start
+21:20:04:199 (25956) > D3D Adapter Information:
+21:20:04:199 (25956) > Adapter Description: NVIDIA GeForce GTX 780
+21:20:04:200 (25956) > VendorID: 10de
+21:20:04:200 (25956) > DeviceID: 1004
+21:20:04:201 (25956) > Revision: a1
+21:20:04:202 (25956) > NVidia hardware detected. Attemping to load NVAPI...
+21:20:04:202 (25956) > NVAPI loaded succesfully.
+21:20:04:278 (25956) > NvAPI_Stereo_IsEnabled() returned an error: -140
+21:20:04:302 (25956) > Reducing mouse lag by setting frame latency to 1...
+21:20:04:302 (25956) > D3D reports feature level 11 is supported.
+21:20:04:306 (25956) > NVAPI Depth Bounds Test supported.
+21:20:04:364 (25956) > D3D Adapter Information:
+21:20:04:364 (25956) > Adapter Description: Microsoft Basic Render Driver
+21:20:04:364 (25956) > VendorID: 1414
+21:20:04:365 (25956) > DeviceID: 8c
+21:20:04:365 (25956) > Revision: 0
+21:20:04:383 (25956) > Reducing mouse lag by setting frame latency to 1...
+21:20:04:384 (25956) > D3D reports feature level 11 is supported.
+21:20:04:384 (25956) > D3D reports no hardware multiple command list support.
+21:20:04:386 (25956) > [Render] Adapter M has no outputs!
+21:20:04:387 (25956) > [Render] PCDX11DeviceManager constructor end
+21:20:06:833 (25956) > CPU count: logical = 4, cores = 4, physical = 1
+21:20:06:850 (25956) > D3D Adapter Information:
+21:20:06:850 (25956) > Adapter Description: NVIDIA GeForce GTX 780
+21:20:06:850 (25956) > VendorID: 10de
+21:20:06:851 (25956) > DeviceID: 1004
+21:20:06:851 (25956) > Revision: a1
+21:20:06:852 (25956) > NVidia hardware detected. Attemping to load NVAPI...
+21:20:06:852 (25956) > NVAPI loaded succesfully.
+21:20:06:853 (25956) > NvAPI_Stereo_IsEnabled() returned an error: -140
+21:20:06:877 (25956) > Reducing mouse lag by setting frame latency to 1...
+21:20:06:877 (25956) > D3D reports feature level 11 is supported.
+21:20:06:878 (25956) > NVAPI Depth Bounds Test supported.
+21:20:06:914 (40304) > CreateSwapChain() = 0
+21:20:06:914 (40304) > MakeWindowAssociation() = 0
+21:20:07:729 (40304) > SetFullscreenState() = 0
+21:20:08:369 (25956) > [Render] Using DirectX 11
+21:20:08:526 (25956) > Initalizing audio...
+21:20:08:566 (25956) > Audio device found. FMOD reports 2 driver(s).
+21:20:08:567 (25956) > Audio Driver Name: Speakers (Realtek High Definition Audio)
+21:20:08:567 (25956) > Speaker Mode: 2
+21:20:11:984 (25956) > WebService is not ready yet, retry...
+21:20:12:493 (25956) > OLWebServiceClient [Status:200] [DownloadEvent:Finished] [HttpError:OK] [ServerError:OK]
+21:20:12:743 (25956) > Request (GetPlayerProfileFrom) [Id:0] failed ! [Status:0] [DownloadEvent:Server Error] [HttpError:Response Receive Failed] [ServerError:OK]
+21:20:14:241 (25956) > Request (GetPlayerProfileFrom) [Id:1] failed ! [Status:0] [DownloadEvent:Server Error] [HttpError:Response Receive Failed] [ServerError:OK]
+21:20:32:824 (25956) > Request (SEM_Login) [Id:2] failed ! [Status:404] [DownloadEvent:Resource Error] [HttpError:Response Status Code] [ServerError:OK]
+21:21:37:237 (25956) > Player object AddRef laracroft: 1 => 2
+21:21:37:244 (25956) > Player object AddRef laracroft: 2 => 3
+21:21:37:263 (25956) > Player object AddRef laracroft: 3 => 4
+21:36:52:541 (25956) > DX11RenderContext:---OnSettingsChanged ---
+21:36:52:543 (25956) > PCDX11RenderContext::Resize(1920, 1080, False)
+21:36:52:544 (25956) > PCDX11RenderContext::Resize no change
+21:42:40:599 (25956) > Player object RemRef laracroft: 4 => 3
+21:42:41:847 (25956) > Player object AddRef laracroft: 3 => 4
+21:50:59:143 (25956) > Player object RemRef laracroft: 4 => 3
+21:50:59:146 (25956) > Player object RemRef laracroft: 3 => 2
+21:50:59:147 (25956) > Player object RemRef laracroft: 2 => 1
+21:51:01:492 (25956) > Player object AddRef laracroft: 1 => 2
+21:51:01:514 (25956) > Player object AddRef laracroft: 2 => 3
+21:51:01:521 (25956) > Player object AddRef laracroft: 3 => 4
+21:52:06:690 (25956) > Player object RemRef laracroft: 4 => 3
+21:53:16:579 (25956) > Player object AddRef laracroft: 3 => 4
+21:53:29:630 (25956) > Player object RemRef laracroft: 4 => 3
+21:53:29:645 (25956) > Player object RemRef laracroft: 3 => 2
+21:53:29:647 (25956) > Player object RemRef laracroft: 2 => 1
+21:53:59:021 (25956) > Exiting the game.
