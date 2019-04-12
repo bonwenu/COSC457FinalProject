@@ -6,11 +6,12 @@ public class Chase : MonoBehaviour
 
     public int speed;
     public GameObject target;
+    private Animator anim;
 
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
-        
+        anim = GetComponent<Animator>();
         DontDestroyOnLoad(transform.gameObject); //keeps player when switching scene
     }
 
