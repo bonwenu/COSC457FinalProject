@@ -27,6 +27,7 @@ public class BuildingView : MonoBehaviour
         {
             // Sprite is changed to inside of the house
             this.GetComponent<SpriteRenderer>().sprite = image2;
+            transform.Translate(0, 0, 4);
         }
     }
 
@@ -36,6 +37,7 @@ public class BuildingView : MonoBehaviour
         {
             // Sprite is changed to inside of the house
             this.GetComponent<SpriteRenderer>().sprite = image1;
+            transform.Translate(0, 0, -4);
         }
     }
 }
