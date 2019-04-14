@@ -89,9 +89,11 @@ GameObject:
   m_Component:
   - component: {fileID: 75006506113401769}
   - component: {fileID: 75006506113401770}
+  - component: {fileID: 674459084619686879}
+  - component: {fileID: 7578085333037713083}
   m_Layer: 0
-  m_Name: Single Small zombie
-  m_TagString: Untagged
+  m_Name: Zombie Large
+  m_TagString: zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 75006506113401768}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 155, y: 66, z: -1.2137736}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
   - {fileID: 75006506408272177}
   m_Father: {fileID: 0}
@@ -123,8 +125,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d0d1f43d4417f045aab31aec84bdb4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 16
+  speed: 12
   target: {fileID: 4142723973097271418, guid: 7eed2fc5ac77e704aabde252875e1a6b, type: 3}
+--- !u!50 &674459084619686879
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75006506113401768}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!95 &7578085333037713083
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75006506113401768}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e881c42d5c8793b4290e3d1758cbb7cf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &75006506408272176
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +182,7 @@ GameObject:
   - component: {fileID: 75006506408272178}
   m_Layer: 8
   m_Name: Enemy3
-  m_TagString: Untagged
+  m_TagString: zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,12 +281,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTimeBtwAttack: 1.7
   attackPos: {fileID: 75006507297643191}
-  blood: {fileID: 0}
+  blood: {fileID: 5231521832160612022, guid: 92edf3e73569d1448829c64eb8715a1c, type: 3}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 512
   attackRange: 9
-  damage: 0.05
+  damage: 1
   health: 0.5
   tempHealth: 0
   healthBar: {fileID: 75006507798928049}

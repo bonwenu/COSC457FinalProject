@@ -7,6 +7,6 @@ public class GameOverButton : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(0);
+        Application.Quit();
     }
 }

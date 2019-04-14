@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTimeBtwAttack: 1
-  blood: {fileID: 0}
+  blood: {fileID: 1847959657875344454, guid: 8d40bae0d4c6628418ed69d0455e5c7c, type: 3}
   attackPos: {fileID: 5515466261009173518}
   whatIsEnemy:
     serializedVersion: 2

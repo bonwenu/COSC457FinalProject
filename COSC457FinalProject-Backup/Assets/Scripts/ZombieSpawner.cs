@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ZombieSpawner : MonoBehaviour
 {
-    public GameObject zombie;
+    public GameObject smallZombie;
+    public GameObject mediumZombie;
+    public GameObject largeZombie;
     float ranY;
     Vector2 whereToSpawn;
     public float spawnRate = 2f;
@@ -18,12 +20,25 @@ public class ZombieSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        System.Random r = new System.Random();
+        int num = r.Next(3);
         if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + spawnRate;
             ranY = Random.Range(-400f, 400f);
             whereToSpawn = new Vector2(transform.position.x, ranY);
-            Instantiate(zombie, whereToSpawn, Quaternion.identity);
+            if (num == 0)
+            {
+                Instantiate(smallZombie, whereToSpawn, Quaternion.identity);
+            }
+            if (num == 1)
+            {
+                Instantiate(mediumZombie, whereToSpawn, Quaternion.identity);
+            }
+            if (num == 2)
+            {
+                Instantiate(largeZombie, whereToSpawn, Quaternion.identity);
+            }
         }
     }
 }

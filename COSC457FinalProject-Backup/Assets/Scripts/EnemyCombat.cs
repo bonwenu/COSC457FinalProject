@@ -13,6 +13,7 @@ public class EnemyCombat : MonoBehaviour
     public float damage;
     public float health;            // Set health to (Desired health/100)-0.1
     public float tempHealth ;
+    
 
     private Animator anime;
     [SerializeField] public HealthBar healthBar;
@@ -23,6 +24,7 @@ public class EnemyCombat : MonoBehaviour
     {
        
         tempHealth = health;
+        
        
     }
 
@@ -41,7 +43,8 @@ public class EnemyCombat : MonoBehaviour
                 {
                     enemiesToDamage[i].GetComponent<PlayerCombat>().TakeDamage(damage);
                     
-                }
+
+            }
             
 
         }
@@ -49,7 +52,7 @@ public class EnemyCombat : MonoBehaviour
         {
             timeBtwAttack -= Time.deltaTime;
         }
-        if (health == 0.0f)
+        if (health == 0.0f || health < 0.0f)
         {
             Destroy(gameObject);
         }
@@ -78,6 +81,7 @@ public class EnemyCombat : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
+        
         Instantiate(blood, transform.position, Quaternion.identity);
         healthBar.SetSize(health);
         health -= damage;

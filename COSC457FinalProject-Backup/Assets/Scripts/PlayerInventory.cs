@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -11,17 +12,18 @@ public class PlayerInventory : MonoBehaviour
     public string[] weaponItems; // THIS IS ALL WEAPONS IN THE GAME
     public string[] healthItems; // THIS IS ALL HEALTH ITEMS IN THE GAME
     public int selectedItem; // this is to indicate which item the player currently has equipped
+    public Text pickupText;
+    public int maxHealthItems;
 
     // Start is called before the first frame update
     void Start()
     {
         // Can add items here
-        essentialItems = new string[] { "Gas", "Tire", "Keys", "Battery" };
+        essentialItems = new string[] { "Gas", "Tire", "Starter", "Battery" };
         weaponItems = new string[] {"Knife", "Gun"};
         healthItems = new string[] {"Bandage"};
 
         // Player inventory initialized to empty strings
-        int maxHealthItems = 5;
         inventory = new string[essentialItems.Length + weaponItems.Length + maxHealthItems + 1];
         inventory[0] = "None"; // this is purely so the player can have nothing equipped if they so wish
         for (int i = 1; i < inventory.Length; i++)
@@ -171,13 +173,14 @@ public class PlayerInventory : MonoBehaviour
                     {
                         if (possibleItems[j][i].CompareTo(inventory[k]) == 0)
                             m++;
-                        if (m >= 5)
+                        if (m >= maxHealthItems)
                             GivePlayerRandomItem(); // There is probably a smarter way to do this
                     }
                 }
 
                 AddToInventory(possibleItems[j][i]);
                 Debug.Log("Added " + possibleItems[j][i] + " to inventory");
+                pickupText.text = pickupText.text + "\n" + possibleItems[j][i];
                 return;
             }
         }

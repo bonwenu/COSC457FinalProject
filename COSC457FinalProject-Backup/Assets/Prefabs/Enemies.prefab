@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 4166583926979392234}
   m_Layer: 8
   m_Name: Enemy2
-  m_TagString: Untagged
+  m_TagString: zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -302,6 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTimeBtwAttack: 1.7
   attackPos: {fileID: 4166583928694626571}
+  blood: {fileID: 0}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 512
@@ -822,7 +823,7 @@ GameObject:
   - component: {fileID: 4166583928501172980}
   m_Layer: 8
   m_Name: Enemy1
-  m_TagString: Untagged
+  m_TagString: zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -921,6 +922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTimeBtwAttack: 1.7
   attackPos: {fileID: 4166583926943664936}
+  blood: {fileID: 0}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 512

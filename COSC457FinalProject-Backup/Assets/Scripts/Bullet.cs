@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     public float speed;
     public float lifetime;
@@ -13,6 +13,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //damage = damage / 10;
         Invoke("DestroyProjectile", lifetime);
     }
 
@@ -20,16 +21,16 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
-        if(hitInfo.collider != null)
+        if (hitInfo.collider != null)
         {
-            if(hitInfo.collider.CompareTag("Zombie"))
+            if (hitInfo.collider.CompareTag("zombie"))
             {
                 Debug.Log("Enemy must take damage!");
                 hitInfo.collider.GetComponent<EnemyCombat>().TakeDamage(damage);
             }
             DestroyProjectile();
         }
-        transform.Translate(transform.up * speed * Time.deltaTime);
+        transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
     void DestroyProjectile()
     {
