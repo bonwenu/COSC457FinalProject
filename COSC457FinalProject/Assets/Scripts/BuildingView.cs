@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class BuildingView : MonoBehaviour
 {
+    private Renderer rend;
+    private int sortingOrderBase;
 
     [Header("Set in Inspector")]
     public Sprite image1;
     public Sprite image2;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
+        rend = gameObject.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class BuildingView : MonoBehaviour
         {
             // Sprite is changed to inside of the house
             this.GetComponent<SpriteRenderer>().sprite = image2;
+            rend.sortingOrder = sortingOrderBase - 2; 
         }
     }
 
@@ -36,6 +39,8 @@ public class BuildingView : MonoBehaviour
         {
             // Sprite is changed to inside of the house
             this.GetComponent<SpriteRenderer>().sprite = image1;
+            sortingOrderBase = 3;
+            rend.sortingOrder = sortingOrderBase;
         }
     }
 }
