@@ -70644,6 +70644,24 @@ PrefabInstance:
       propertyPath: spawnRate
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 7968434787594120582, guid: 71475dae1dc7b33409ce9d82b5e6906b,
+        type: 3}
+      propertyPath: largeZombie
+      value: 
+      objectReference: {fileID: 2879236235751871678, guid: 95e6a606b4828d04f8be9ebcd28ec78e,
+        type: 3}
+    - target: {fileID: 7968434787594120582, guid: 71475dae1dc7b33409ce9d82b5e6906b,
+        type: 3}
+      propertyPath: smallZombie
+      value: 
+      objectReference: {fileID: 8035229945020307959, guid: 6fcf08c809f0bbc4eb35a28321461bde,
+        type: 3}
+    - target: {fileID: 7968434787594120582, guid: 71475dae1dc7b33409ce9d82b5e6906b,
+        type: 3}
+      propertyPath: mediumZombie
+      value: 
+      objectReference: {fileID: 4269076463150034081, guid: ba4b4bc3ddfac01419321eca77de7bee,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71475dae1dc7b33409ce9d82b5e6906b, type: 3}
 --- !u!4 &479573621 stripped
@@ -71358,6 +71376,24 @@ PrefabInstance:
       propertyPath: spawnRate
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 7968434787594120582, guid: 71475dae1dc7b33409ce9d82b5e6906b,
+        type: 3}
+      propertyPath: smallZombie
+      value: 
+      objectReference: {fileID: 8035229945020307959, guid: 6fcf08c809f0bbc4eb35a28321461bde,
+        type: 3}
+    - target: {fileID: 7968434787594120582, guid: 71475dae1dc7b33409ce9d82b5e6906b,
+        type: 3}
+      propertyPath: mediumZombie
+      value: 
+      objectReference: {fileID: 4269076463150034081, guid: ba4b4bc3ddfac01419321eca77de7bee,
+        type: 3}
+    - target: {fileID: 7968434787594120582, guid: 71475dae1dc7b33409ce9d82b5e6906b,
+        type: 3}
+      propertyPath: largeZombie
+      value: 
+      objectReference: {fileID: 2879236235751871678, guid: 95e6a606b4828d04f8be9ebcd28ec78e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71475dae1dc7b33409ce9d82b5e6906b, type: 3}
 --- !u!4 &1015158252 stripped
@@ -77232,7 +77268,8 @@ PrefabInstance:
         type: 3}
       propertyPath: blood
       value: 
-      objectReference: {fileID: 260521830}
+      objectReference: {fileID: 1847959657875344454, guid: 8d40bae0d4c6628418ed69d0455e5c7c,
+        type: 3}
     - target: {fileID: 5515466262618412751, guid: bb2531ba6911f2641b915b21e499ff6e,
         type: 3}
       propertyPath: hitSource
@@ -77243,5 +77280,10 @@ PrefabInstance:
       propertyPath: gunFire
       value: 
       objectReference: {fileID: 1280544489}
+    - target: {fileID: 5515466262569087521, guid: bb2531ba6911f2641b915b21e499ff6e,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 819837336}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb2531ba6911f2641b915b21e499ff6e, type: 3}
