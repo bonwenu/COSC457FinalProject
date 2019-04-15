@@ -13,18 +13,18 @@ public class PlayerInventory : MonoBehaviour
     public string[] healthItems; // THIS IS ALL HEALTH ITEMS IN THE GAME
     public int selectedItem; // this is to indicate which item the player currently has equipped
     public Text pickupText;
-    public int maxHealthItems;
+    public Text countText;
 
     // Start is called before the first frame update
     void Start()
     {
         // Can add items here
         essentialItems = new string[] { "Gas", "Tire", "Starter", "Battery" };
-        weaponItems = new string[] {"Knife", "Gun"};
-        healthItems = new string[] {"Bandage"};
+        weaponItems = new string[] {"Knife", "Gun", "Bat", "Axe"};
+        healthItems = new string[] {"Bandage", "Food", "Water", "Pills"};
 
         // Player inventory initialized to empty strings
-        inventory = new string[essentialItems.Length + weaponItems.Length + maxHealthItems + 1];
+        inventory = new string[essentialItems.Length + weaponItems.Length + healthItems.Length + 1];
         inventory[0] = "None"; // this is purely so the player can have nothing equipped if they so wish
         for (int i = 1; i < inventory.Length; i++)
         {
@@ -164,23 +164,18 @@ public class PlayerInventory : MonoBehaviour
         {
             j = r.Next(0, possibleItems.Length);
             i = r.Next(0, possibleItems[j].Length);
-            if (!IsInInventory(possibleItems[j][i]) || (j == 2))
+            if (!IsInInventory(possibleItems[j][i]))
             {
-                int m = 0;
-                if (j == 2)
-                {
-                    for (int k = 0; k < inventory.Length; k++)
-                    {
-                        if (possibleItems[j][i].CompareTo(inventory[k]) == 0)
-                            m++;
-                        if (m >= maxHealthItems)
-                            GivePlayerRandomItem(); // There is probably a smarter way to do this
-                    }
-                }
-
                 AddToInventory(possibleItems[j][i]);
                 Debug.Log("Added " + possibleItems[j][i] + " to inventory");
-                pickupText.text = pickupText.text + "\n" + possibleItems[j][i];
+                if (IsEssentialItem(possibleItems[j][i]))
+                {
+                    countText.text = countText.text + "\n" + possibleItems[j][i];
+                }
+                else
+                {
+                    pickupText.text = pickupText.text + "\n" + possibleItems[j][i];
+                }
                 return;
             }
         }

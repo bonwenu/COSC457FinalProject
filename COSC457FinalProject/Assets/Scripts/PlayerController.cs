@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
     public float speed;
     private Vector2 moveVelocity;
     private Rigidbody2D rb2d;
-    public int score;
-    public Text scoreText;
 
     private Animator anim; 
 
@@ -20,8 +18,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        score = 0;
-        setScoreText();
 
         anim = GetComponent<Animator>(); //makes a connection with the animator 
         
@@ -66,29 +62,20 @@ public class PlayerController : MonoBehaviour
             {
                 // ...Then set the chest as open,
                 other.gameObject.GetComponent<ChestScript>().isOpen = true;
-                // Add one to the inventory score,
-                score = score + 1;
                 // Give the player a random item,
                 this.GetComponent<PlayerInventory>().GivePlayerRandomItem();
-                // And set the UI text telling the player how many items they have.
-                setScoreText();
             }
         }
         // If the player runs into the car...
         else if (other.gameObject.CompareTag("Car"))
         {
             // ...And the player has all items...
-            if (score >= 4 && this.GetComponent<PlayerInventory>().HasAllItems())
+            if (this.GetComponent<PlayerInventory>().HasAllItems())
             {
                 // ...Then they win!
                 SceneManager.LoadScene(3);
             }
         }
 
-    }
-
-    void setScoreText()
-    {
-        scoreText.text = "Score: " + score.ToString();
     }
 }
