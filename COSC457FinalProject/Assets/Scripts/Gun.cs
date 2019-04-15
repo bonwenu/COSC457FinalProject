@@ -35,22 +35,24 @@ public class Gun : MonoBehaviour
 
         if (timeBtwnShots <= 0)
         {
+            // If left mouse button is clicked, shoot
 
-
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && projectile.activeSelf && gunFire.activeSelf)
             {
                 Instantiate(gunFire, transform.position, Quaternion.identity);
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 timeBtwnShots = startTimeBtwnShots;
+                
             }
         }
         else {
             timeBtwnShots -= Time.deltaTime;
         }
+        
     }
 
-    void checkForGun()
+    void DestroyProjectile()
     {
-        // Check if gun is equipped.
+        Destroy(gameObject);
     }
 }
