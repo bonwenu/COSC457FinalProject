@@ -43,10 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c19fe636d18bf647951921187cbb331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallZombie: {fileID: 6712175961655300793, guid: 6fcf08c809f0bbc4eb35a28321461bde,
+  smallZombie: {fileID: 2894350853228825187, guid: 6fcf08c809f0bbc4eb35a28321461bde,
     type: 3}
-  mediumZombie: {fileID: 2937128025533374455, guid: ba4b4bc3ddfac01419321eca77de7bee,
+  mediumZombie: {fileID: 8206155007948451012, guid: ba4b4bc3ddfac01419321eca77de7bee,
     type: 3}
-  largeZombie: {fileID: 3336613639993314593, guid: 95e6a606b4828d04f8be9ebcd28ec78e,
+  largeZombie: {fileID: 8916018854181770736, guid: 95e6a606b4828d04f8be9ebcd28ec78e,
     type: 3}
   spawnRate: 8
