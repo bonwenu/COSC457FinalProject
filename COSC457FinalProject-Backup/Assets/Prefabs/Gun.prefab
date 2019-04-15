@@ -77,7 +77,7 @@ MonoBehaviour:
   offset: -90
   projectile: {fileID: 5042994079260301834, guid: 78d75b93b1fd22b4c9da0535ec5c23b2,
     type: 3}
-  gunFire: {fileID: 5761720274684587899, guid: 5c4e0c0ca7c0a8349a3445b82abba069, type: 3}
+  gunFire: {fileID: 0}
   shotPoint: {fileID: 4577744136134537218}
   startTimeBtwnShots: 0.8
   player: {fileID: 817389467269076592, guid: 2ad64732eae2e134b86fc25ab043b4e2, type: 3}
