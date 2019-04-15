@@ -251,9 +251,9 @@ GameObject:
   - component: {fileID: 817389467269076598}
   - component: {fileID: 817389467269076597}
   - component: {fileID: 817389467269076596}
+  - component: {fileID: 817389467269076595}
   - component: {fileID: 817389467269076594}
   - component: {fileID: 817389467269076593}
-  - component: {fileID: 1936615472569499347}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -406,6 +406,25 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 04f8ad8a63fe71349bdb529c76f10115, type: 3}
   hitSource: {fileID: 0}
   healthBar: {fileID: 817389467653740619}
+--- !u!95 &817389467269076595
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817389467269076592}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d8aab975cfa1144ba332874e0133c27, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &817389467269076594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,25 +623,6 @@ PolygonCollider2D:
       - {x: -0.48, y: -3.9399998}
       - {x: -0.39, y: -3.85}
       - {x: -0.34, y: -3.77}
---- !u!95 &1936615472569499347
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817389467269076592}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8d8aab975cfa1144ba332874e0133c27, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &817389467304898664
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,11 +798,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4577744136605922819, guid: 5407b3637666eca4ea16849c9848a9ee,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 817389467269076592}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5407b3637666eca4ea16849c9848a9ee, type: 3}
 --- !u!4 &817389466132507500 stripped
