@@ -66,7 +66,7 @@ public class PlayerInventory : MonoBehaviour
 
         for(int i = 0; i < inventory.Length; i++)
         {
-            if (IsEssentialItem(inventory[selectedItem]))
+            if (IsEssentialItem(inventory[selectedItem]) || inventory[selectedItem].CompareTo("") == 0)
             {
                 if (selectedItem + 1 == inventory.Length)
                 {
@@ -96,7 +96,7 @@ public class PlayerInventory : MonoBehaviour
 
         for (int i = 0; i < inventory.Length; i++)
         {
-            if (IsEssentialItem(inventory[selectedItem]))
+            if (IsEssentialItem(inventory[selectedItem]) || inventory[selectedItem].CompareTo("") == 0)
             {
                 if (selectedItem == 0)
                 {
@@ -151,7 +151,7 @@ public class PlayerInventory : MonoBehaviour
     }
 
     // GivePlayerRandomItem gives the player a bomb that explodes when in the inventory, killing the player instantly
-    // just kidding, it gives them a random item they don't already have (except bandages, player can have multiple)
+    // just kidding, it gives them a random item they don't already have
     public void GivePlayerRandomItem()
     {
         System.Random r = new System.Random();
