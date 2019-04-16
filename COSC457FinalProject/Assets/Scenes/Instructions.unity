@@ -510,8 +510,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000023842, y: 0.0000047684}
-  m_SizeDelta: {x: 330.07, y: 164.66}
+  m_AnchoredPosition: {x: -0.0000023842, y: -11.6}
+  m_SizeDelta: {x: 330.1, y: 187.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1417050556
 MonoBehaviour:
@@ -546,9 +546,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Melee attack zombies with spacebar, and shoot with the mouse, but watch
-    out they can hurt you too! Find car parts in chests. Once all four have been found,
-    return to the car to escape!
+  m_Text: Melee attack with spacebar, if you find the gun you can shoot with the mouse,
+    but watch out the zombies can hurt you too! Find car parts, weapons, and healing
+    items in chests. Once all four car parts have been found, return to the car to
+    escape!
 --- !u!222 &1417050557
 CanvasRenderer:
   m_ObjectHideFlags: 0
