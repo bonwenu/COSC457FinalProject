@@ -17,6 +17,7 @@ public class PlayerCombat : MonoBehaviour
     public AudioClip hitSound;
     public AudioSource hitSource;
 
+
     private Animator anime;
     [SerializeField] public HealthBar healthBar;
 
@@ -31,6 +32,19 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()       // Function for player attacking
     {
+        // damage modifiers
+        if  (this.GetComponent<PlayerInventory>().IsInInventory("Knife") == true)
+        {
+            damage = 0.1f;
+        }
+        if (this.GetComponent<PlayerInventory>().IsInInventory("Bat") == true)
+        {
+            damage = 0.135f;
+        }
+        if (this.GetComponent<PlayerInventory>().IsInInventory("Axe") == true)
+        {
+            damage = 0.15f;
+        }
         if (timeBtwAttack <= 0)
         {
             // time you can attack
