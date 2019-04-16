@@ -33,10 +33,38 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (player.transform.position.x > minX && player.transform.position.x < maxX && player.transform.position.y > minY && player.transform.position.y < maxY)
+        if (player.transform.position.x <= minX)
+        {
+            Vector3 newPosition = player.transform.position + offset;
+            newPosition.x = minX;
+            transform.position = newPosition;
+        }
+        else if(player.transform.position.x >= maxX)
+        {
+            Vector3 newPosition = player.transform.position + offset;
+            newPosition.x = maxX;
+            transform.position = newPosition;
+        }
+        else if (player.transform.position.y <= minY)
+        {
+            Vector3 newPosition = player.transform.position + offset;
+            newPosition.y = minY;
+            transform.position = newPosition;
+        }
+        else if (player.transform.position.y >= maxY)
+        {
+            Vector3 newPosition = player.transform.position + offset;
+            newPosition.y = maxY;
+            transform.position = newPosition;
+        }
+        else
         {
             transform.position = player.transform.position + offset;
         }
+        //if (player.transform.position.x > minX && player.transform.position.x < maxX && player.transform.position.y > minY && player.transform.position.y < maxY)
+        //{
+        //    transform.position = player.transform.position + offset;
+        //}
         //transform.position = player.transform.position + offset;
         
     }
