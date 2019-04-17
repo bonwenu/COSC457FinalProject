@@ -80268,7 +80268,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: dcf64bee15eeb3645af3db3cf4b222ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f7b6447aee8ef3428059095ed233a35, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -80421,6 +80421,10 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.11745228, y: 0.11753747}
       - {x: 0.11675404, y: 0.7138687}
+      - {x: 0.07044017, y: 0.71355784}
+      - {x: 0.07032454, y: 0.7430826}
+      - {x: 0.04951048, y: 0.74281806}
+      - {x: 0.049544692, y: 0.71400905}
       - {x: 0.00070257013, y: 0.71367}
       - {x: 0.0013148083, y: 0.116690464}
       - {x: -0.03380105, y: 0.11665338}
@@ -80454,6 +80458,10 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.11745228, y: 0.11753747}
       - {x: 0.11675404, y: 0.7138687}
+      - {x: 0.06897724, y: 0.7139437}
+      - {x: 0.06899589, y: 0.7429103}
+      - {x: 0.04812205, y: 0.7425887}
+      - {x: 0.047976494, y: 0.71451724}
       - {x: 0.00070257013, y: 0.71367}
       - {x: 0.0013148083, y: 0.116690464}
       - {x: -0.03380105, y: 0.11665338}
@@ -80487,6 +80495,10 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.11745228, y: 0.11753747}
       - {x: 0.11675404, y: 0.7138687}
+      - {x: 0.0689109, y: 0.71331865}
+      - {x: 0.0690192, y: 0.7427401}
+      - {x: 0.04902917, y: 0.7428279}
+      - {x: 0.048609585, y: 0.71390295}
       - {x: 0.00070257013, y: 0.71367}
       - {x: 0.0013148083, y: 0.116690464}
       - {x: -0.03380105, y: 0.11665338}
@@ -80520,6 +80532,10 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.11745228, y: 0.11753747}
       - {x: 0.11675404, y: 0.7138687}
+      - {x: 0.0706038, y: 0.7144054}
+      - {x: 0.06912642, y: 0.74300635}
+      - {x: 0.04894709, y: 0.74325365}
+      - {x: 0.048506193, y: 0.71439}
       - {x: 0.00070257013, y: 0.71367}
       - {x: 0.0013148083, y: 0.116690464}
       - {x: -0.03380105, y: 0.11665338}
@@ -87887,7 +87903,7 @@ PrefabInstance:
     - target: {fileID: 513048903728492578, guid: b401bc877486f4e4c93f5bac178b0002,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b401bc877486f4e4c93f5bac178b0002, type: 3}
@@ -88580,6 +88596,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4532722442110622937, guid: fc4597d693011054da9e3c6c6991a760,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc4597d693011054da9e3c6c6991a760, type: 3}
@@ -93022,6 +93043,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.84641474
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866090418373482334, guid: 019a31e93abbe264e88f95c976c6634e,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.53508157
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866090418373482334, guid: 019a31e93abbe264e88f95c976c6634e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.12680921
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866090418373482335, guid: 019a31e93abbe264e88f95c976c6634e,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.5350816
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866090418373482335, guid: 019a31e93abbe264e88f95c976c6634e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.12680918
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 019a31e93abbe264e88f95c976c6634e, type: 3}
