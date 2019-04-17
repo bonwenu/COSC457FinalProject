@@ -32,6 +32,7 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()       // Function for player attacking
     {
+        healthBar.SetSize(health / tempHealth);
         // damage modifiers
         // now applies modifiers if the player has the item equipped, rather than the item just being in the inventory
         if  (this.GetComponent<PlayerInventory>().inventory[this.GetComponent<PlayerInventory>().selectedItem].CompareTo("Knife") == 0)

@@ -88,6 +88,7 @@ public class PlayerInventory : MonoBehaviour
                 inventory[selectedItem].CompareTo("Water") == 0 || inventory[selectedItem].CompareTo("Pills") == 0)
             {
                 float health = this.GetComponent<PlayerCombat>().health;
+                float tempHealth = this.GetComponent<PlayerCombat>().tempHealth;
                 if (inventory[selectedItem].CompareTo("Bandage") == 0)
                 {
                     health += 0.5f;
@@ -119,6 +120,7 @@ public class PlayerInventory : MonoBehaviour
                 if (health > 2)
                     health = 2;
                 this.GetComponent<PlayerCombat>().health = health;
+                this.GetComponent<PlayerCombat>().healthBar.SetSize(health / tempHealth);
                 inventory[selectedItem] = "";
                 SelectNextItem();
                 selectedItems[selectedItem].color = Color.white;
