@@ -92,6 +92,7 @@ public class PlayerInventory : MonoBehaviour
                 if (inventory[selectedItem].CompareTo("Bandage") == 0)
                 {
                     health += 0.5f;
+                    healthItems[0] = "";
                     int index = getItemImageindex("Bandage");
                     usableItems[index].sprite = usedHealthItems[1];
                     selectedItems[index].color = Color.clear;
@@ -99,6 +100,7 @@ public class PlayerInventory : MonoBehaviour
                 else if (inventory[selectedItem].CompareTo("Food") == 0)
                 {
                     health += 0.15f;
+                    healthItems[1] = "";
                     int index = getItemImageindex("Food");
                     usableItems[index].sprite = usedHealthItems[2];
                     selectedItems[index].color = Color.clear;
@@ -106,6 +108,7 @@ public class PlayerInventory : MonoBehaviour
                 else if (inventory[selectedItem].CompareTo("Water") == 0)
                 {
                     health += 0.25f;
+                    healthItems[2] = "";
                     int index = getItemImageindex("Water");
                     usableItems[index].sprite = usedHealthItems[0];
                     selectedItems[index].color = Color.clear;
@@ -113,6 +116,7 @@ public class PlayerInventory : MonoBehaviour
                 else if (inventory[selectedItem].CompareTo("Pills") == 0)
                 {
                     health += 1f;
+                    healthItems[3] = "";
                     int index = getItemImageindex("Pills");
                     usableItems[index].sprite = usedHealthItems[3];
                     selectedItems[index].color = Color.clear;
@@ -240,7 +244,7 @@ public class PlayerInventory : MonoBehaviour
         {
             j = r.Next(0, possibleItems.Length);
             i = r.Next(0, possibleItems[j].Length);
-            if (!IsInInventory(possibleItems[j][i]))
+            if (!IsInInventory(possibleItems[j][i]) && possibleItems[j][i].CompareTo("") != 0)
             {
                 AddToInventory(possibleItems[j][i]);
                 Debug.Log("Added " + possibleItems[j][i] + " to inventory");
