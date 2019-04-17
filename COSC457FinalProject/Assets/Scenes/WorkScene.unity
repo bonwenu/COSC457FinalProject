@@ -80020,7 +80020,7 @@ GameObject:
   - component: {fileID: 868195988}
   - component: {fileID: 868195987}
   m_Layer: 0
-  m_Name: Tilemap_BehindStore
+  m_Name: Tilemap_TreesBehindStore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80921,7 +80921,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1017715828}
   m_Layer: 10
-  m_Name: Buildings
+  m_Name: MapObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92332,7 +92332,7 @@ PrefabInstance:
     - target: {fileID: 1979234437151409694, guid: 3843877672e0c7e4e8db4b63f8e5f41d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: 1979234437151409694, guid: 3843877672e0c7e4e8db4b63f8e5f41d,
         type: 3}
@@ -92383,6 +92383,61 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979234437151409688, guid: 3843877672e0c7e4e8db4b63f8e5f41d,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979234437151409688, guid: 3843877672e0c7e4e8db4b63f8e5f41d,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979234437151409688, guid: 3843877672e0c7e4e8db4b63f8e5f41d,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979234437151409688, guid: 3843877672e0c7e4e8db4b63f8e5f41d,
+        type: 3}
+      propertyPath: SizeBySpeedModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979234437151409688, guid: 3843877672e0c7e4e8db4b63f8e5f41d,
+        type: 3}
+      propertyPath: SizeBySpeedModule.range.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979234437151409688, guid: 3843877672e0c7e4e8db4b63f8e5f41d,
+        type: 3}
+      propertyPath: NoiseModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979234437151409688, guid: 3843877672e0c7e4e8db4b63f8e5f41d,
+        type: 3}
+      propertyPath: ShapeModule.type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979234437151409688, guid: 3843877672e0c7e4e8db4b63f8e5f41d,
+        type: 3}
+      propertyPath: ShapeModule.angle
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979234437151409688, guid: 3843877672e0c7e4e8db4b63f8e5f41d,
+        type: 3}
+      propertyPath: ShapeModule.arc.value
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979234437151409695, guid: 3843877672e0c7e4e8db4b63f8e5f41d,
+        type: 3}
+      propertyPath: m_MaxParticleSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979234437151409695, guid: 3843877672e0c7e4e8db4b63f8e5f41d,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3843877672e0c7e4e8db4b63f8e5f41d, type: 3}
