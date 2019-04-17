@@ -510,8 +510,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.7, y: -0.6}
-  m_SizeDelta: {x: 333.5, y: 209.9}
+  m_AnchoredPosition: {x: -0.000012159, y: -0.00001812}
+  m_SizeDelta: {x: 333.5, y: 232.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1417050556
 MonoBehaviour:
@@ -546,10 +546,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Move with w,a,s,d. Melee attack with spacebar, if you find the gun you can
-    shoot with the mouse, but watch out the zombies can hurt you too! Find car parts,
-    weapons, and healing items in chests. Once all four car parts have been found,
-    return to the car to escape!
+  m_Text: Move with w,a,s,d. Find car parts, weapons, and healing items in chests.
+    Change equipped item with the scroll wheel. Melee attack with spacebar. If you
+    find the gun you can shoot with the left mouse button. Use a healing item with
+    the left mouse button. Once all four car parts have been found, return to the
+    car to escape!
 --- !u!222 &1417050557
 CanvasRenderer:
   m_ObjectHideFlags: 0
