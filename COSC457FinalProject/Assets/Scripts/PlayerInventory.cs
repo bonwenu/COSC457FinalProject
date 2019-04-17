@@ -63,7 +63,7 @@ public class PlayerInventory : MonoBehaviour
         float msd = Input.mouseScrollDelta.y;
         if (msd != 0)
         {
-            if(msd > 0)
+            if(msd < 0)
             {
                 // if the wheel scrolled up, select the next item
                 selectedItems[getItemImageindex(inventory[selectedItem])].color = Color.clear;
@@ -98,21 +98,21 @@ public class PlayerInventory : MonoBehaviour
                 else if (inventory[selectedItem].CompareTo("Food") == 0)
                 {
                     health += 0.15f;
-                    int index = getItemImageindex("Bandage");
+                    int index = getItemImageindex("Food");
                     usableItems[index].sprite = usedHealthItems[2];
                     selectedItems[index].color = Color.clear;
                 }
                 else if (inventory[selectedItem].CompareTo("Water") == 0)
                 {
                     health += 0.25f;
-                    int index = getItemImageindex("Bandage");
+                    int index = getItemImageindex("Water");
                     usableItems[index].sprite = usedHealthItems[0];
                     selectedItems[index].color = Color.clear;
                 }
                 else if (inventory[selectedItem].CompareTo("Pills") == 0)
                 {
                     health += 1f;
-                    int index = getItemImageindex("Bandage");
+                    int index = getItemImageindex("Pills");
                     usableItems[index].sprite = usedHealthItems[3];
                     selectedItems[index].color = Color.clear;
                 }
@@ -121,7 +121,7 @@ public class PlayerInventory : MonoBehaviour
                 this.GetComponent<PlayerCombat>().health = health;
                 inventory[selectedItem] = "";
                 SelectNextItem();
-                selectedItems[selectedItem].color = Color.white;
+                selectedItems[getItemImageindex(inventory[selectedItem])].color = Color.white;
             }
         }
     }
