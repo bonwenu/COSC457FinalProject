@@ -223,15 +223,15 @@ public class PlayerInventory : MonoBehaviour
                 Vector3 temp;
                 if (IsEssentialItem(possibleItems[j][i]))
                 {
-                    countText.text = countText.text + "\n" + possibleItems[j][i];
+                    //countText.text = countText.text + "\n" + possibleItems[j][i];
                     for (int k = 0; k <= carParts.Length; k++)
                     {
                         if (carParts[k].sprite == null)
                         {
                             carParts[k].sprite = getSprite(possibleItems[j][i]);
-                            temp = carParts[k].transform.localScale;
-                            temp.x = carParts[k].sprite.rect.size.x / carParts[k].sprite.rect.size.y;
-                            carParts[k].transform.localScale = temp;
+                            //temp = carParts[k].transform.localScale;
+                            //temp.x = carParts[k].sprite.rect.size.x / carParts[k].sprite.rect.size.y;
+                            //carParts[k].transform.localScale = temp;
                             carParts[k].color = Color.white;
                             k = carParts.Length;
                         }
@@ -239,15 +239,15 @@ public class PlayerInventory : MonoBehaviour
                 }
                 else
                 {
-                    pickupText.text = pickupText.text + "\n" + possibleItems[j][i];
+                    //pickupText.text = pickupText.text + "\n" + possibleItems[j][i];
                     for(int k = 0; k <= usableItems.Length; k++)
                     {
                         if (usableItems[k].sprite == null)
                         {
                             usableItems[k].sprite = getSprite(possibleItems[j][i]);
-                            temp = usableItems[k].transform.localScale;
-                            temp.x = usableItems[k].sprite.rect.size.x / usableItems[k].sprite.rect.size.y;
-                            usableItems[k].transform.localScale = temp;;
+                            //temp = usableItems[k].transform.localScale;
+                            //temp.x = usableItems[k].sprite.rect.size.x / usableItems[k].sprite.rect.size.y;
+                            //usableItems[k].transform.localScale = temp;;
                             usableItems[k].color = Color.white;
                             k = usableItems.Length;
                         }
