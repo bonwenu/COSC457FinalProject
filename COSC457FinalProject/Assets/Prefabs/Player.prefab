@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 7285027886770405926}
   - component: {fileID: 2088977032418787580}
   - component: {fileID: 6611046595280320164}
+  - component: {fileID: 5401125625816489708}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -401,6 +402,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f8f5165350e8447a1f516a925f553d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemSprites: []
+  carParts: []
+  usableItems: []
   inventory: []
   essentialItems: []
   weaponItems: []
@@ -650,6 +654,25 @@ PolygonCollider2D:
       - {x: -0.48, y: -3.9399998}
       - {x: -0.39, y: -3.85}
       - {x: -0.34, y: -3.77}
+--- !u!114 &5401125625816489708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3683172913469357887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85710ac52051304429fc22d0310b80ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+  outOfCombat: {fileID: 245432807440410004, guid: a2013e795f77d304cb007ba20044e19a,
+    type: 2}
+  inCombat: {fileID: 245058461939821918, guid: a2013e795f77d304cb007ba20044e19a, type: 2}
+  stings: []
+  stingSource: {fileID: 0}
+  bpm: 128
 --- !u!1 &5837752576103225424
 GameObject:
   m_ObjectHideFlags: 0
