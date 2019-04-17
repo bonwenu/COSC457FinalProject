@@ -91,7 +91,7 @@ public class PlayerInventory : MonoBehaviour
                 float tempHealth = this.GetComponent<PlayerCombat>().tempHealth;
                 if (inventory[selectedItem].CompareTo("Bandage") == 0)
                 {
-                    health += 0.5f;
+                    health += 1f;
                     healthItems[0] = "";
                     int index = getItemImageindex("Bandage");
                     usableItems[index].sprite = usedHealthItems[1];
@@ -99,7 +99,7 @@ public class PlayerInventory : MonoBehaviour
                 }
                 else if (inventory[selectedItem].CompareTo("Food") == 0)
                 {
-                    health += 0.15f;
+                    health += 0.25f;
                     healthItems[1] = "";
                     int index = getItemImageindex("Food");
                     usableItems[index].sprite = usedHealthItems[2];
@@ -107,7 +107,7 @@ public class PlayerInventory : MonoBehaviour
                 }
                 else if (inventory[selectedItem].CompareTo("Water") == 0)
                 {
-                    health += 0.25f;
+                    health += 0.5f;
                     healthItems[2] = "";
                     int index = getItemImageindex("Water");
                     usableItems[index].sprite = usedHealthItems[0];
@@ -115,14 +115,14 @@ public class PlayerInventory : MonoBehaviour
                 }
                 else if (inventory[selectedItem].CompareTo("Pills") == 0)
                 {
-                    health += 1f;
+                    health += 1.5f;
                     healthItems[3] = "";
                     int index = getItemImageindex("Pills");
                     usableItems[index].sprite = usedHealthItems[3];
                     selectedItems[index].color = Color.clear;
                 }
-                if (health > 2)
-                    health = 2;
+                if (health > 3)
+                    health = 3;
                 this.GetComponent<PlayerCombat>().health = health;
                 this.GetComponent<PlayerCombat>().healthBar.SetSize(health / tempHealth);
                 inventory[selectedItem] = "";
