@@ -68243,7 +68243,7 @@ PrefabInstance:
     - target: {fileID: 7968434787594120582, guid: 71475dae1dc7b33409ce9d82b5e6906b,
         type: 3}
       propertyPath: spawnRate
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71475dae1dc7b33409ce9d82b5e6906b, type: 3}
@@ -89477,7 +89477,7 @@ PrefabInstance:
     - target: {fileID: 7968434787594120582, guid: 71475dae1dc7b33409ce9d82b5e6906b,
         type: 3}
       propertyPath: spawnRate
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71475dae1dc7b33409ce9d82b5e6906b, type: 3}
