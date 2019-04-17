@@ -546,10 +546,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Melee attack with spacebar, if you find the gun you can shoot with the mouse,
-    but watch out the zombies can hurt you too! Find car parts, weapons, and healing
-    items in chests. Once all four car parts have been found, return to the car to
-    escape!
+  m_Text: Move with w,a,s,d. Melee attack with spacebar, if you find the gun you can
+    shoot with the mouse, but watch out the zombies can hurt you too! Find car parts,
+    weapons, and healing items in chests. Once all four car parts have been found,
+    return to the car to escape!
 --- !u!222 &1417050557
 CanvasRenderer:
   m_ObjectHideFlags: 0
