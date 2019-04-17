@@ -68212,7 +68212,7 @@ PrefabInstance:
     - target: {fileID: 4532722442110622937, guid: fc4597d693011054da9e3c6c6991a760,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc4597d693011054da9e3c6c6991a760, type: 3}
@@ -79762,7 +79762,7 @@ PrefabInstance:
     - target: {fileID: 3159975473303818392, guid: 1ab1a02908b50664bb40218624b1ca83,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ab1a02908b50664bb40218624b1ca83, type: 3}
@@ -93005,6 +93005,11 @@ PrefabInstance:
       propertyPath: health
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2081310964138543010, guid: a4109e58a0d95ac468b04ebe6ed2a71d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1507407033975853373, guid: a4109e58a0d95ac468b04ebe6ed2a71d,
         type: 3}
       propertyPath: gunFire
@@ -94649,6 +94654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[1].Array.data[160].y
       value: -3.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401125625816489708, guid: a4109e58a0d95ac468b04ebe6ed2a71d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4109e58a0d95ac468b04ebe6ed2a71d, type: 3}
