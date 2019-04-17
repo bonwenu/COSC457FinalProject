@@ -18,7 +18,7 @@ public class PlayerCombat : MonoBehaviour
     public AudioSource hitSource;
 
 
-    private Animator anime;
+    private Animator anime; // >:3c
     [SerializeField] public HealthBar healthBar;
 
 
@@ -33,18 +33,24 @@ public class PlayerCombat : MonoBehaviour
     void Update()       // Function for player attacking
     {
         // damage modifiers
-        if  (this.GetComponent<PlayerInventory>().IsInInventory("Knife") == true)
+        // now applies modifiers if the player has the item equipped, rather than the item just being in the inventory
+        if  (this.GetComponent<PlayerInventory>().inventory[this.GetComponent<PlayerInventory>().selectedItem].CompareTo("Knife") == 0)
         {
             damage = 0.1f;
         }
-        if (this.GetComponent<PlayerInventory>().IsInInventory("Bat") == true)
+        else if (this.GetComponent<PlayerInventory>().inventory[this.GetComponent<PlayerInventory>().selectedItem].CompareTo("Bat") == 0)
         {
             damage = 0.135f;
         }
-        if (this.GetComponent<PlayerInventory>().IsInInventory("Axe") == true)
+        else if (this.GetComponent<PlayerInventory>().inventory[this.GetComponent<PlayerInventory>().selectedItem].CompareTo("Axe") == 0)
         {
             damage = 0.15f;
         }
+        else
+        {
+            damage = 0.05f;
+        }
+
         if (timeBtwAttack <= 0)
         {
             // time you can attack
