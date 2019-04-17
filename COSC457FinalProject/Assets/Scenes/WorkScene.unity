@@ -91611,6 +91611,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1278018093434363437, guid: a4109e58a0d95ac468b04ebe6ed2a71d,
         type: 3}
+      propertyPath: usableItems.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278018093434363437, guid: a4109e58a0d95ac468b04ebe6ed2a71d,
+        type: 3}
       propertyPath: pickupText
       value: 
       objectReference: {fileID: 1931132520}
@@ -91711,6 +91716,46 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300022, guid: 0ee9a379279118a46991048fddbb6818,
         type: 3}
+    - target: {fileID: 1278018093434363437, guid: a4109e58a0d95ac468b04ebe6ed2a71d,
+        type: 3}
+      propertyPath: usableItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 2070104616}
+    - target: {fileID: 1278018093434363437, guid: a4109e58a0d95ac468b04ebe6ed2a71d,
+        type: 3}
+      propertyPath: usableItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 1609575687}
+    - target: {fileID: 1278018093434363437, guid: a4109e58a0d95ac468b04ebe6ed2a71d,
+        type: 3}
+      propertyPath: usableItems.Array.data[2]
+      value: 
+      objectReference: {fileID: 822157576}
+    - target: {fileID: 1278018093434363437, guid: a4109e58a0d95ac468b04ebe6ed2a71d,
+        type: 3}
+      propertyPath: usableItems.Array.data[3]
+      value: 
+      objectReference: {fileID: 1345669133}
+    - target: {fileID: 1278018093434363437, guid: a4109e58a0d95ac468b04ebe6ed2a71d,
+        type: 3}
+      propertyPath: usableItems.Array.data[4]
+      value: 
+      objectReference: {fileID: 974858773}
+    - target: {fileID: 1278018093434363437, guid: a4109e58a0d95ac468b04ebe6ed2a71d,
+        type: 3}
+      propertyPath: usableItems.Array.data[5]
+      value: 
+      objectReference: {fileID: 360222672}
+    - target: {fileID: 1278018093434363437, guid: a4109e58a0d95ac468b04ebe6ed2a71d,
+        type: 3}
+      propertyPath: usableItems.Array.data[6]
+      value: 
+      objectReference: {fileID: 316457814}
+    - target: {fileID: 1278018093434363437, guid: a4109e58a0d95ac468b04ebe6ed2a71d,
+        type: 3}
+      propertyPath: usableItems.Array.data[7]
+      value: 
+      objectReference: {fileID: 551014626}
     - target: {fileID: 2081310964138543010, guid: a4109e58a0d95ac468b04ebe6ed2a71d,
         type: 3}
       propertyPath: blood
