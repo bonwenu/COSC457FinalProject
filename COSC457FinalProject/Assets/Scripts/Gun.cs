@@ -24,10 +24,18 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.GetComponent<PlayerInventory>().IsInInventory("Gun") == true)
+        // now gun is only active if it is equipped
+        if (player.GetComponent<PlayerInventory>().inventory[player.GetComponent<PlayerInventory>().selectedItem].CompareTo("Gun") == 0)
         {
             projectile.SetActive(true);
             gunFire.SetActive(true);
+            Debug.Log("Gun is active");
+        }
+        else
+        {
+            projectile.SetActive(false);
+            gunFire.SetActive(false);
+            Debug.Log("Gun is not active");
         }
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;

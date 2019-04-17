@@ -19,7 +19,7 @@ public class PlayerInventory : MonoBehaviour
     void Start()
     {
         // Can add items here
-        essentialItems = new string[] { "Gas", "Tire", "Starter", "Battery" };
+        essentialItems = new string[] { "Gas", "Tire", "Starter", "Battery"};
         weaponItems = new string[] {"Knife", "Gun", "Bat", "Axe"};
         healthItems = new string[] {"Bandage", "Food", "Water", "Pills"};
 
@@ -50,6 +50,37 @@ public class PlayerInventory : MonoBehaviour
                 SelectPreviousItem();
             }
         }
+
+        // this is how the player can regain health
+        if(Input.GetMouseButton(0))
+        {
+            if (inventory[selectedItem].CompareTo("Bandage") == 0 || inventory[selectedItem].CompareTo("Food") == 0 ||
+                inventory[selectedItem].CompareTo("Water") == 0 || inventory[selectedItem].CompareTo("Pills") == 0)
+            {
+                float health = this.GetComponent<PlayerCombat>().health;
+                if (inventory[selectedItem].CompareTo("Bandage") == 0)
+                {
+                    health += 0.5f;
+                }
+                else if (inventory[selectedItem].CompareTo("Food") == 0)
+                {
+                    health += 0.15f;
+                }
+                else if (inventory[selectedItem].CompareTo("Water") == 0)
+                {
+                    health += 0.25f;
+                }
+                else if (inventory[selectedItem].CompareTo("Pills") == 0)
+                {
+                    health += 1f;
+                }
+                if (health > 2)
+                    health = 2;
+                this.GetComponent<PlayerCombat>().health = health;
+                inventory[selectedItem] = "";
+                SelectNextItem();
+            }
+        }
     }
 
     // SelectNextItem selects the next item
@@ -66,7 +97,7 @@ public class PlayerInventory : MonoBehaviour
 
         for(int i = 0; i < inventory.Length; i++)
         {
-            if (IsEssentialItem(inventory[selectedItem]))
+            if (IsEssentialItem(inventory[selectedItem]) || inventory[selectedItem].CompareTo("") == 0)
             {
                 if (selectedItem + 1 == inventory.Length)
                 {
@@ -96,7 +127,7 @@ public class PlayerInventory : MonoBehaviour
 
         for (int i = 0; i < inventory.Length; i++)
         {
-            if (IsEssentialItem(inventory[selectedItem]))
+            if (IsEssentialItem(inventory[selectedItem]) || inventory[selectedItem].CompareTo("") == 0)
             {
                 if (selectedItem == 0)
                 {
@@ -151,7 +182,7 @@ public class PlayerInventory : MonoBehaviour
     }
 
     // GivePlayerRandomItem gives the player a bomb that explodes when in the inventory, killing the player instantly
-    // just kidding, it gives them a random item they don't already have (except bandages, player can have multiple)
+    // just kidding, it gives them a random item they don't already have
     public void GivePlayerRandomItem()
     {
         System.Random r = new System.Random();
