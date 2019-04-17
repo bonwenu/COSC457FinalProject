@@ -91,28 +91,37 @@ public class PlayerInventory : MonoBehaviour
                 if (inventory[selectedItem].CompareTo("Bandage") == 0)
                 {
                     health += 0.5f;
-                    usableItems[getItemImageindex("Bandage")].sprite = usedHealthItems[1];
+                    int index = getItemImageindex("Bandage");
+                    usableItems[index].sprite = usedHealthItems[1];
+                    selectedItems[index].color = Color.clear;
                 }
                 else if (inventory[selectedItem].CompareTo("Food") == 0)
                 {
                     health += 0.15f;
-                    usableItems[getItemImageindex("Food")].sprite = usedHealthItems[2];
+                    int index = getItemImageindex("Bandage");
+                    usableItems[index].sprite = usedHealthItems[2];
+                    selectedItems[index].color = Color.clear;
                 }
                 else if (inventory[selectedItem].CompareTo("Water") == 0)
                 {
                     health += 0.25f;
-                    usableItems[getItemImageindex("Water")].sprite = usedHealthItems[0];
+                    int index = getItemImageindex("Bandage");
+                    usableItems[index].sprite = usedHealthItems[0];
+                    selectedItems[index].color = Color.clear;
                 }
                 else if (inventory[selectedItem].CompareTo("Pills") == 0)
                 {
                     health += 1f;
-                    usableItems[getItemImageindex("Pills")].sprite = usedHealthItems[3];
+                    int index = getItemImageindex("Bandage");
+                    usableItems[index].sprite = usedHealthItems[3];
+                    selectedItems[index].color = Color.clear;
                 }
                 if (health > 2)
                     health = 2;
                 this.GetComponent<PlayerCombat>().health = health;
                 inventory[selectedItem] = "";
                 SelectNextItem();
+                selectedItems[selectedItem].color = Color.white;
             }
         }
     }
