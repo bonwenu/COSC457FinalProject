@@ -35,7 +35,7 @@ public class Gun : MonoBehaviour
         {
             projectile.SetActive(false);
             gunFire.SetActive(false);
-            Debug.Log("Gun is not active");
+            //Debug.Log("Gun is not active");
         }
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
