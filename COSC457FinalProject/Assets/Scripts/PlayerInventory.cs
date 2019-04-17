@@ -6,6 +6,27 @@ using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
+    [Header("Set in Inspector")]
+    public Sprite[] itemSprites;
+    /* Sprites are as follows:
+     itemSprites[0] = Bat
+     itemSprites[1] = Knife
+     itemSprites[2] = Axe
+     itemSprites[3] = Gun
+     
+     itemSprites[4] = Tire
+     itemSprites[5] = Gas
+     itemSprites[6] = Starter
+     itemSprites[7] = Battery
+     
+     itemSprites[8] = Water
+     itemSprites[9] = Bandage
+     itemSprites[10] = Food
+     itemSprites[11] = Pills
+     */
+    public Image[] carParts;
+    public Image[] usableItems;
+
     [Header("Set Dynamically")]
     public string[] inventory; // THIS IS THE PLAYER INVENTORY
     public string[] essentialItems; // THIS IS ALL THE CAR ITEMS IN THE GAME
@@ -199,17 +220,72 @@ public class PlayerInventory : MonoBehaviour
             {
                 AddToInventory(possibleItems[j][i]);
                 Debug.Log("Added " + possibleItems[j][i] + " to inventory");
+                Vector3 temp;
                 if (IsEssentialItem(possibleItems[j][i]))
                 {
                     countText.text = countText.text + "\n" + possibleItems[j][i];
+                    for (int k = 0; k <= carParts.Length; k++)
+                    {
+                        if (carParts[k].sprite == null)
+                        {
+                            carParts[k].sprite = getSprite(possibleItems[j][i]);
+                            temp = carParts[k].transform.localScale;
+                            temp.x = carParts[k].sprite.rect.size.x / carParts[k].sprite.rect.size.y;
+                            carParts[k].transform.localScale = temp;
+                            carParts[k].color = Color.white;
+                            k = carParts.Length;
+                        }
+                    }
                 }
                 else
                 {
                     pickupText.text = pickupText.text + "\n" + possibleItems[j][i];
+                    for(int k = 0; k <= usableItems.Length; k++)
+                    {
+                        if (usableItems[k].sprite == null)
+                        {
+                            usableItems[k].sprite = getSprite(possibleItems[j][i]);
+                            temp = usableItems[k].transform.localScale;
+                            temp.x = usableItems[k].sprite.rect.size.x / usableItems[k].sprite.rect.size.y;
+                            usableItems[k].transform.localScale = temp;;
+                            usableItems[k].color = Color.white;
+                            k = usableItems.Length;
+                        }
+                    }
                 }
                 return;
             }
         }
+    }
+
+    public Sprite getSprite(String item)
+    {
+        if (item.CompareTo("Bat") == 0)
+            return itemSprites[0];
+        if (item.CompareTo("Knife") == 0)
+            return itemSprites[1];
+        if (item.CompareTo("Axe") == 0)
+            return itemSprites[2];
+        if (item.CompareTo("Gun") == 0)
+            return itemSprites[3];
+        if (item.CompareTo("Tire") == 0)
+            return itemSprites[4];
+        if (item.CompareTo("Gas") == 0)
+            return itemSprites[5];
+        if (item.CompareTo("Starter") == 0)
+            return itemSprites[6];
+        if (item.CompareTo("Battery") == 0)
+            return itemSprites[7];
+        if (item.CompareTo("Water") == 0)
+            return itemSprites[8];
+        if (item.CompareTo("Bandage") == 0)
+            return itemSprites[9];
+        if (item.CompareTo("Food") == 0)
+            return itemSprites[10];
+        if (item.CompareTo("Pills") == 0)
+            return itemSprites[11];
+
+        return null;
     }
 
     // HasAllItems checks to see if the player has all essential items (car parts)
