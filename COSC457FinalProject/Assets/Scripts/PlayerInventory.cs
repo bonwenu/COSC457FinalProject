@@ -24,8 +24,11 @@ public class PlayerInventory : MonoBehaviour
      itemSprites[10] = Food
      itemSprites[11] = Pills
      */
+    public Sprite[] usedHealthItems;
+
     public Image[] carParts;
     public Image[] usableItems;
+    public Image[] selectedItems;
 
     [Header("Set Dynamically")]
     public string[] inventory; // THIS IS THE PLAYER INVENTORY
@@ -63,12 +66,18 @@ public class PlayerInventory : MonoBehaviour
             if(msd > 0)
             {
                 // if the wheel scrolled up, select the next item
+                selectedItems[getItemImageindex(inventory[selectedItem])].color = Color.clear;
                 SelectNextItem();
+                if (inventory[selectedItem].CompareTo("None") != 0)
+                    selectedItems[getItemImageindex(inventory[selectedItem])].color = Color.white;
             }
             else
             {
                 // if the wheel scrolled down, select the previous item
+                selectedItems[getItemImageindex(inventory[selectedItem])].color = Color.clear;
                 SelectPreviousItem();
+                if(inventory[selectedItem].CompareTo("None") != 0)
+                    selectedItems[getItemImageindex(inventory[selectedItem])].color = Color.white;
             }
         }
 
@@ -82,18 +91,22 @@ public class PlayerInventory : MonoBehaviour
                 if (inventory[selectedItem].CompareTo("Bandage") == 0)
                 {
                     health += 0.5f;
+                    usableItems[getItemImageindex("Bandage")].sprite = usedHealthItems[1];
                 }
                 else if (inventory[selectedItem].CompareTo("Food") == 0)
                 {
                     health += 0.15f;
+                    usableItems[getItemImageindex("Food")].sprite = usedHealthItems[2];
                 }
                 else if (inventory[selectedItem].CompareTo("Water") == 0)
                 {
                     health += 0.25f;
+                    usableItems[getItemImageindex("Water")].sprite = usedHealthItems[0];
                 }
                 else if (inventory[selectedItem].CompareTo("Pills") == 0)
                 {
                     health += 1f;
+                    usableItems[getItemImageindex("Pills")].sprite = usedHealthItems[3];
                 }
                 if (health > 2)
                     health = 2;
@@ -247,7 +260,7 @@ public class PlayerInventory : MonoBehaviour
                             usableItems[k].sprite = getSprite(possibleItems[j][i]);
                             //temp = usableItems[k].transform.localScale;
                             //temp.x = usableItems[k].sprite.rect.size.x / usableItems[k].sprite.rect.size.y;
-                            //usableItems[k].transform.localScale = temp;;
+                            //usableItems[k].transform.localScale = temp;
                             usableItems[k].color = Color.white;
                             k = usableItems.Length;
                         }
@@ -286,6 +299,18 @@ public class PlayerInventory : MonoBehaviour
             return itemSprites[11];
 
         return null;
+    }
+
+    public int getItemImageindex(String item)
+    {
+        Sprite sprite = getSprite(item);
+        
+        for(int i = 0; i <= usableItems.Length; i++)
+        {
+            if (usableItems[i].sprite == sprite)
+                return i;
+        }
+        return -1;
     }
 
     // HasAllItems checks to see if the player has all essential items (car parts)
